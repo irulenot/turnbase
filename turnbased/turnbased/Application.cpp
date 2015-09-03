@@ -37,9 +37,10 @@ Application::Application()
     if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
         return EXIT_FAILURE;
     }
-    sf::Text text("Project U", font, 50);
+    sf::Text text("turnbased", font, 50);
     text.setColor(sf::Color::Black);
     
+    /*
     // Load a music to play
     sf::Music music;
     if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
@@ -48,7 +49,8 @@ Application::Application()
     
     // Play the music
     music.play();
-    
+    */
+     
     // Start the game loop
     while (mWindow.isOpen())
     {

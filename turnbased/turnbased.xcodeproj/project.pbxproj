@@ -10,7 +10,7 @@
 		D24800641B98553000E0D5CC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800611B98553000E0D5CC /* Application.cpp */; };
 		D24800651B98553000E0D5CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800631B98553000E0D5CC /* main.cpp */; };
 		D248006E1B98553700E0D5CC /* Mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = D24800661B98553700E0D5CC /* Mountain.png */; };
-		D248006F1B98553700E0D5CC /* Project U-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24800671B98553700E0D5CC /* Project U-Info.plist */; };
+		D248006F1B98553700E0D5CC /* turnbased-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24800671B98553700E0D5CC /* turnbased-Info.plist */; };
 		D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */ = {isa = PBXBuildFile; fileRef = D24800691B98553700E0D5CC /* ResourceHolder.inl */; };
 		D24800711B98553700E0D5CC /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = D248006C1B98553700E0D5CC /* ResourcePath.mm */; };
 		D24800721B98553700E0D5CC /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D248006D1B98553700E0D5CC /* Sansation.ttf */; };
@@ -22,7 +22,7 @@
 		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		D24800631B98553000E0D5CC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D24800661B98553700E0D5CC /* Mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mountain.png; sourceTree = "<group>"; };
-		D24800671B98553700E0D5CC /* Project U-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Project U-Info.plist"; sourceTree = "<group>"; };
+		D24800671B98553700E0D5CC /* turnbased-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "turnbased-Info.plist"; sourceTree = "<group>"; };
 		D24800681B98553700E0D5CC /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
 		D24800691B98553700E0D5CC /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
 		D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceIdentifiers.hpp; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		D248003A1B98549E00E0D5CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D24800671B98553700E0D5CC /* Project U-Info.plist */,
+				D24800671B98553700E0D5CC /* turnbased-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */,
 				D24800721B98553700E0D5CC /* Sansation.ttf in Resources */,
 				D248006E1B98553700E0D5CC /* Mountain.png in Resources */,
-				D248006F1B98553700E0D5CC /* Project U-Info.plist in Resources */,
+				D248006F1B98553700E0D5CC /* turnbased-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
