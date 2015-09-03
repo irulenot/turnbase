@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D24800641B98553000E0D5CC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800611B98553000E0D5CC /* Application.cpp */; };
+		D24800651B98553000E0D5CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800631B98553000E0D5CC /* main.cpp */; };
+		D248006E1B98553700E0D5CC /* Mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = D24800661B98553700E0D5CC /* Mountain.png */; };
+		D248006F1B98553700E0D5CC /* Project U-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D24800671B98553700E0D5CC /* Project U-Info.plist */; };
+		D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */ = {isa = PBXBuildFile; fileRef = D24800691B98553700E0D5CC /* ResourceHolder.inl */; };
+		D24800711B98553700E0D5CC /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = D248006C1B98553700E0D5CC /* ResourcePath.mm */; };
+		D24800721B98553700E0D5CC /* Sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D248006D1B98553700E0D5CC /* Sansation.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D24800371B98549E00E0D5CC /* turnbased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnbased.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D248003B1B98549E00E0D5CC /* turnbased-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnbased-Info.plist"; sourceTree = "<group>"; };
+		D24800611B98553000E0D5CC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		D24800631B98553000E0D5CC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D24800661B98553700E0D5CC /* Mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mountain.png; sourceTree = "<group>"; };
+		D24800671B98553700E0D5CC /* Project U-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Project U-Info.plist"; sourceTree = "<group>"; };
+		D24800681B98553700E0D5CC /* ResourceHolder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceHolder.hpp; sourceTree = "<group>"; };
+		D24800691B98553700E0D5CC /* ResourceHolder.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ResourceHolder.inl; sourceTree = "<group>"; };
+		D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourceIdentifiers.hpp; sourceTree = "<group>"; };
+		D248006B1B98553700E0D5CC /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		D248006C1B98553700E0D5CC /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		D248006D1B98553700E0D5CC /* Sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sansation.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D24800331B98549E00E0D5CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D248002D1B98549E00E0D5CC = {
+			isa = PBXGroup;
+			children = (
+				D24800391B98549E00E0D5CC /* turnbased */,
+				D24800381B98549E00E0D5CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D24800381B98549E00E0D5CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D24800371B98549E00E0D5CC /* turnbased.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D24800391B98549E00E0D5CC /* turnbased */ = {
+			isa = PBXGroup;
+			children = (
+				D24800611B98553000E0D5CC /* Application.cpp */,
+				D24800621B98553000E0D5CC /* Application.hpp */,
+				D24800631B98553000E0D5CC /* main.cpp */,
+				D24800661B98553700E0D5CC /* Mountain.png */,
+				D24800681B98553700E0D5CC /* ResourceHolder.hpp */,
+				D24800691B98553700E0D5CC /* ResourceHolder.inl */,
+				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
+				D248006B1B98553700E0D5CC /* ResourcePath.hpp */,
+				D248006C1B98553700E0D5CC /* ResourcePath.mm */,
+				D24800411B98549E00E0D5CC /* Resources */,
+				D248003A1B98549E00E0D5CC /* Supporting Files */,
+			);
+			path = turnbased;
+			sourceTree = "<group>";
+		};
+		D248003A1B98549E00E0D5CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D248003B1B98549E00E0D5CC /* turnbased-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D24800411B98549E00E0D5CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D248006D1B98553700E0D5CC /* Sansation.ttf */,
+				D24800671B98553700E0D5CC /* Project U-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D24800361B98549E00E0D5CC /* turnbased */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D248004C1B98549E00E0D5CC /* Build configuration list for PBXNativeTarget "turnbased" */;
+			buildPhases = (
+				D24800321B98549E00E0D5CC /* Sources */,
+				D24800331B98549E00E0D5CC /* Frameworks */,
+				D24800341B98549E00E0D5CC /* Resources */,
+				D24800351B98549E00E0D5CC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = turnbased;
+			productName = turnbased;
+			productReference = D24800371B98549E00E0D5CC /* turnbased.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D248002E1B98549E00E0D5CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = WandA;
+				TargetAttributes = {
+					D24800361B98549E00E0D5CC = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = D24800311B98549E00E0D5CC /* Build configuration list for PBXProject "turnbased" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D248002D1B98549E00E0D5CC;
+			productRefGroup = D24800381B98549E00E0D5CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D24800361B98549E00E0D5CC /* turnbased */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D24800341B98549E00E0D5CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */,
+				D24800721B98553700E0D5CC /* Sansation.ttf in Resources */,
+				D248006E1B98553700E0D5CC /* Mountain.png in Resources */,
+				D248006F1B98553700E0D5CC /* Project U-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D24800351B98549E00E0D5CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/usr/local/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$CMAKE_INSTALL_FRAMEWORK_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$CMAKE_INSTALL_FRAMEWORK_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D24800321B98549E00E0D5CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24800711B98553700E0D5CC /* ResourcePath.mm in Sources */,
+				D24800651B98553000E0D5CC /* main.cpp in Sources */,
+				D24800641B98553000E0D5CC /* Application.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D248004A1B98549E00E0D5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		D248004B1B98549E00E0D5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		D248004D1B98549E00E0D5CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "turnbased/turnbased-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D248004E1B98549E00E0D5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "turnbased/turnbased-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D24800311B98549E00E0D5CC /* Build configuration list for PBXProject "turnbased" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D248004A1B98549E00E0D5CC /* Debug */,
+				D248004B1B98549E00E0D5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D248004C1B98549E00E0D5CC /* Build configuration list for PBXNativeTarget "turnbased" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D248004D1B98549E00E0D5CC /* Debug */,
+				D248004E1B98549E00E0D5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D248002E1B98549E00E0D5CC /* Project object */;
+}
