@@ -18,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		D24800371B98549E00E0D5CC /* turnbased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnbased.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D248003B1B98549E00E0D5CC /* turnbased-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnbased-Info.plist"; sourceTree = "<group>"; };
 		D24800611B98553000E0D5CC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		D24800631B98553000E0D5CC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 				D24800611B98553000E0D5CC /* Application.cpp */,
 				D24800621B98553000E0D5CC /* Application.hpp */,
 				D24800631B98553000E0D5CC /* main.cpp */,
-				D24800661B98553700E0D5CC /* Mountain.png */,
 				D24800681B98553700E0D5CC /* ResourceHolder.hpp */,
 				D24800691B98553700E0D5CC /* ResourceHolder.inl */,
 				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
@@ -80,7 +78,7 @@
 		D248003A1B98549E00E0D5CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D248003B1B98549E00E0D5CC /* turnbased-Info.plist */,
+				D24800671B98553700E0D5CC /* Project U-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -88,8 +86,8 @@
 		D24800411B98549E00E0D5CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D24800661B98553700E0D5CC /* Mountain.png */,
 				D248006D1B98553700E0D5CC /* Sansation.ttf */,
-				D24800671B98553700E0D5CC /* Project U-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
