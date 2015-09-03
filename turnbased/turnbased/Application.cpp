@@ -37,7 +37,7 @@ Application::Application()
     if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
         return EXIT_FAILURE;
     }
-    sf::Text text("turnbased", font, 50);
+    sf::Text text("turnbased deez nutz", font, 50);
     text.setColor(sf::Color::Black);
     
     /*
