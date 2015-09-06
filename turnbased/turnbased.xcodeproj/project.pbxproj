@@ -64,11 +64,8 @@
 				D24800611B98553000E0D5CC /* Application.cpp */,
 				D24800621B98553000E0D5CC /* Application.hpp */,
 				D24800631B98553000E0D5CC /* main.cpp */,
-				D24800681B98553700E0D5CC /* ResourceHolder.hpp */,
-				D24800691B98553700E0D5CC /* ResourceHolder.inl */,
 				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
-				D248006B1B98553700E0D5CC /* ResourcePath.hpp */,
-				D248006C1B98553700E0D5CC /* ResourcePath.mm */,
+				D2E782B51B9CD85B008F5E7A /* Foundation */,
 				D24800411B98549E00E0D5CC /* Resources */,
 				D248003A1B98549E00E0D5CC /* Supporting Files */,
 			);
@@ -90,6 +87,17 @@
 				D248006D1B98553700E0D5CC /* Sansation.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D2E782B51B9CD85B008F5E7A /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D24800681B98553700E0D5CC /* ResourceHolder.hpp */,
+				D24800691B98553700E0D5CC /* ResourceHolder.inl */,
+				D248006C1B98553700E0D5CC /* ResourcePath.mm */,
+				D248006B1B98553700E0D5CC /* ResourcePath.hpp */,
+			);
+			name = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +327,7 @@
 				D248004E1B98549E00E0D5CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
