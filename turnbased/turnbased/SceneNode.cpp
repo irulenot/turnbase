@@ -52,3 +52,39 @@ void SceneNode::updateChildren(sf::Time dt)
     FOREACH(Ptr& child, mChildren)
     child->update(dt);
 }
+
+void SceneNode::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+    states.transform *= getTransform();
+    
+    drawCurrent(target, states);
+    drawChildren(target, states);
+}
+
+void SceneNode::drawCurrent(sf::RenderTarget &target, sf::RenderStates states) const
+{
+}
+
+void SceneNode::drawChildren(sf::RenderTarget &target, sf::RenderStates states)const
+{
+    FOREACH(const Ptr& child, mChildren)
+    child->draw(target, states);
+}
+
+sf::Transform SceneNode::getWorldTransform() const
+{
+    sf::Transform transform = sf::Transform::Identity;  //does nothing(wtf?????)
+    
+    for (const SceneNode* node = this; node != nullptr; node = node->mParent)   //traverses scenenode tree
+        transform = node->getTransform() * transform;                           //to gather absolute trans
+    
+    return transform;
+}
+
+sf::Vector2f SceneNode::getWorldPosition() const
+{
+    return getWorldTransform() * sf::Vector2f();
+}
+
+
+

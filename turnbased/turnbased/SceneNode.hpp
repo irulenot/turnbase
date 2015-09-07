@@ -30,6 +30,8 @@ public:
     
     void                    update(sf::Time dt);
     
+    sf::Vector2f			getWorldPosition() const;       //returns ABSOLUTE position
+    sf::Transform			getWorldTransform() const;      // accounts for all parent transforms
     
 private:
     virtual void			updateCurrent(sf::Time dt);
