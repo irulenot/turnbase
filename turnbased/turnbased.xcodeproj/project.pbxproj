@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
+		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		D24800641B98553000E0D5CC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800611B98553000E0D5CC /* Application.cpp */; };
 		D24800651B98553000E0D5CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800631B98553000E0D5CC /* main.cpp */; };
 		D248006E1B98553700E0D5CC /* Mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = D24800661B98553700E0D5CC /* Mountain.png */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneNode.cpp; sourceTree = "<group>"; };
+		2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SceneNode.hpp; sourceTree = "<group>"; };
+		2D612C731B9CD80500F1BCC1 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		2D612C741B9CD80500F1BCC1 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		2D612C761B9CE59000F1BCC1 /* Foreach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		D24800371B98549E00E0D5CC /* turnbased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnbased.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24800611B98553000E0D5CC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
@@ -68,6 +75,11 @@
 				D2E782B51B9CD85B008F5E7A /* Foundation */,
 				D24800411B98549E00E0D5CC /* Resources */,
 				D248003A1B98549E00E0D5CC /* Supporting Files */,
+				2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */,
+				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,
+				2D612C731B9CD80500F1BCC1 /* Entity.cpp */,
+				2D612C741B9CD80500F1BCC1 /* Entity.hpp */,
+				2D612C761B9CE59000F1BCC1 /* Foreach.hpp */,
 			);
 			path = turnbased;
 			sourceTree = "<group>";
@@ -189,6 +201,8 @@
 			files = (
 				D24800711B98553700E0D5CC /* ResourcePath.mm in Sources */,
 				D24800651B98553000E0D5CC /* main.cpp in Sources */,
+				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,
+				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,
 				D24800641B98553000E0D5CC /* Application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
