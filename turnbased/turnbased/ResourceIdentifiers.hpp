@@ -20,6 +20,7 @@ namespace Textures
     enum ID
     {
         Mountain,
+        TitleScreen,
     };
 }
 

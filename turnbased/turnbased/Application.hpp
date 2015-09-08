@@ -8,8 +8,11 @@
 
 #include "ResourceHolder.hpp"
 #include "ResourceIdentifiers.hpp"
+#include "StateStack.hpp"
 
+#include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 #ifndef Project_U_Application_hpp
 #define Project_U_Application_hpp
@@ -20,17 +23,25 @@ public:
                             Application();
     void                    run();
     
-private:    //functions
+private:
     void					processInput();
     void					update(sf::Time dt);
     void					render();
     
-private:    //variables
+    void					updateStatistics(sf::Time dt);
+    void					registerStates();
+    
+private:
     static const sf::Time   TimePerFrame;
     
     sf::RenderWindow        mWindow;
     TextureHolder           mTextures;
     FontHolder              mFonts;
+    StateStack				mStateStack;
+    
+    sf::Text				mStatisticsText;
+    sf::Time				mStatisticsUpdateTime;
+    std::size_t				mStatisticsNumFrames;
 };
 
 

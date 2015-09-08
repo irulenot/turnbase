@@ -8,14 +8,14 @@
 
 #include "Application.hpp"
 #include "ResourcePath.hpp"
+#include "StringHelper.hpp"
+#include "State.hpp"
+#include "StateIdentifiers.hpp"
+#include "TitleState.hpp"
+
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
-
-
-// TO DO
-// 1. Be sure to include all states, include state identifiers
-// 2. Utility file for math and other useful functions
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
@@ -23,86 +23,102 @@ Application::Application()
 : mWindow(sf::VideoMode(1234, 732), "Gameplay", sf::Style::Close)
 , mTextures()
 , mFonts()
+, mStateStack(State::Context(mWindow, mTextures, mFonts))
 {
     mWindow.setKeyRepeatEnabled(false);
+    mWindow.setVerticalSyncEnabled(true);
     
     
+    mFonts.load(Fonts::Main, resourcePath() + "sansation.ttf");
     
+    mTextures.load(Textures::TitleScreen, resourcePath() + "Mountain.png");
     
-    sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "Mountain.png")) {
-        return EXIT_FAILURE;
-    }
-    sf::Sprite sprite(texture);
+    mStatisticsText.setFont(mFonts.get(Fonts::Main));
+    mStatisticsText.setPosition(5.f, 5.f);
+    mStatisticsText.setCharacterSize(10u);
     
-    // Create a graphical text to display
-    sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
-    sf::Text text("turnbased deez nutz", font, 50);
-    text.setColor(sf::Color::Black);
-    
-    /*
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
-        return EXIT_FAILURE;
-    }
-    
-    // Play the music
-    music.play();
-    */
+    registerStates();
+    mStateStack.pushState(States::Title);   // Initialize title screen
+
      
-    // Start the game loop
-    while (mWindow.isOpen())
-    {
-        // Process events
-        sf::Event event;
-        while (mWindow.pollEvent(event))
-        {
-            // Close window: exit
-            if (event.type == sf::Event::Closed) {
-                mWindow.close();
-            }
-            
-            // Escape pressed: exit
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-                mWindow.close();
-            }
-        }
-        
-        // Clear screen
-        mWindow.clear();
-        
-        // Draw the sprite
-        mWindow.draw(sprite);
-        
-        // Draw the string
-        mWindow.draw(text);
-        
-        // Update the window
-        mWindow.display();
-    }
 }
 
 void Application::run()
 {
+    sf::Clock clock;
+    sf::Time timeSinceLastUpdate = sf::Time::Zero;
     
+    while (mWindow.isOpen())
+    {
+        sf::Time dt = clock.restart();
+        timeSinceLastUpdate += dt;
+        while (timeSinceLastUpdate > TimePerFrame)
+        {
+            timeSinceLastUpdate -= TimePerFrame;
+            
+            processInput();
+            update(TimePerFrame);
+            
+            // Check inside this loop, because stack might be empty before update() call
+            if (mStateStack.isEmpty())
+                mWindow.close();
+        }
+        
+        updateStatistics(dt);
+        render();
+    }
+
 }
 
 void Application::processInput()
 {
-    
+    sf::Event event;
+    while (mWindow.pollEvent(event))
+    {
+        mStateStack.handleEvent(event);
+        
+        if (event.type == sf::Event::Closed)
+            mWindow.close();
+    }
     
 }
 
 void Application::update(sf::Time dt)
 {
-    
+    mStateStack.update(dt);
 }
 
 void Application::render()
 {
+    mWindow.clear();
     
+    mStateStack.draw();
+    
+    mWindow.setView(mWindow.getDefaultView());
+    mWindow.draw(mStatisticsText);
+    
+    mWindow.display();
 }
+
+void Application::updateStatistics(sf::Time dt)
+{
+    mStatisticsUpdateTime += dt;
+    mStatisticsNumFrames += 1;
+    if (mStatisticsUpdateTime >= sf::seconds(1.0f))
+    {
+        mStatisticsText.setString("FPS: " + toString(mStatisticsNumFrames));
+        
+        mStatisticsUpdateTime -= sf::seconds(1.0f);
+        mStatisticsNumFrames = 0;
+    }
+
+}
+void Application::registerStates()
+{
+    mStateStack.registerState<TitleState>(States::Title);
+
+}
+
+
+
+

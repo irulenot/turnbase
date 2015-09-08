@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2D2AAE911B9E6D34006A474B /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AAE8F1B9E6D34006A474B /* State.cpp */; };
 		2D2AAE951B9E7118006A474B /* StateStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AAE931B9E7118006A474B /* StateStack.cpp */; };
+		2D2AAE9B1B9E8993006A474B /* TitleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AAE9A1B9E8993006A474B /* TitleState.cpp */; };
+		2D2AAE9F1B9E8A42006A474B /* Utility.inl in Resources */ = {isa = PBXBuildFile; fileRef = 2D2AAE9E1B9E8A42006A474B /* Utility.inl */; };
+		2D2AAEA11B9E8A51006A474B /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AAEA01B9E8A51006A474B /* Utility.cpp */; };
 		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
 		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */; };
@@ -27,6 +30,12 @@
 		2D2AAE921B9E6D97006A474B /* StateIdentifiers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateIdentifiers.hpp; sourceTree = "<group>"; };
 		2D2AAE931B9E7118006A474B /* StateStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateStack.cpp; sourceTree = "<group>"; };
 		2D2AAE941B9E7118006A474B /* StateStack.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = StateStack.hpp; sourceTree = "<group>"; };
+		2D2AAE971B9E8340006A474B /* StringHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringHelper.hpp; sourceTree = "<group>"; };
+		2D2AAE9A1B9E8993006A474B /* TitleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleState.cpp; sourceTree = "<group>"; };
+		2D2AAE9C1B9E89A2006A474B /* TitleState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TitleState.hpp; sourceTree = "<group>"; };
+		2D2AAE9D1B9E8A42006A474B /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
+		2D2AAE9E1B9E8A42006A474B /* Utility.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utility.inl; sourceTree = "<group>"; };
+		2D2AAEA01B9E8A51006A474B /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneNode.cpp; sourceTree = "<group>"; };
 		2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SceneNode.hpp; sourceTree = "<group>"; };
 		2D612C731B9CD80500F1BCC1 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
@@ -67,6 +76,8 @@
 				2D2AAE921B9E6D97006A474B /* StateIdentifiers.hpp */,
 				2D2AAE931B9E7118006A474B /* StateStack.cpp */,
 				2D2AAE941B9E7118006A474B /* StateStack.hpp */,
+				2D2AAE9A1B9E8993006A474B /* TitleState.cpp */,
+				2D2AAE9C1B9E89A2006A474B /* TitleState.hpp */,
 			);
 			name = "States, Stack, IDs";
 			sourceTree = "<group>";
@@ -133,6 +144,10 @@
 				D24800691B98553700E0D5CC /* ResourceHolder.inl */,
 				D248006C1B98553700E0D5CC /* ResourcePath.mm */,
 				D248006B1B98553700E0D5CC /* ResourcePath.hpp */,
+				2D2AAE971B9E8340006A474B /* StringHelper.hpp */,
+				2D2AAE9D1B9E8A42006A474B /* Utility.hpp */,
+				2D2AAE9E1B9E8A42006A474B /* Utility.inl */,
+				2D2AAEA01B9E8A51006A474B /* Utility.cpp */,
 			);
 			name = "Utilities and Macros";
 			sourceTree = "<group>";
@@ -195,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */,
+				2D2AAE9F1B9E8A42006A474B /* Utility.inl in Resources */,
 				D24800721B98553700E0D5CC /* Sansation.ttf in Resources */,
 				D248006E1B98553700E0D5CC /* Mountain.png in Resources */,
 				D248006F1B98553700E0D5CC /* turnbased-Info.plist in Resources */,
@@ -226,10 +242,12 @@
 			files = (
 				D24800711B98553700E0D5CC /* ResourcePath.mm in Sources */,
 				D24800651B98553000E0D5CC /* main.cpp in Sources */,
+				2D2AAEA11B9E8A51006A474B /* Utility.cpp in Sources */,
 				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,
 				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,
 				2D2AAE911B9E6D34006A474B /* State.cpp in Sources */,
 				2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */,
+				2D2AAE9B1B9E8993006A474B /* TitleState.cpp in Sources */,
 				2D2AAE951B9E7118006A474B /* StateStack.cpp in Sources */,
 				D24800641B98553000E0D5CC /* Application.cpp in Sources */,
 			);
