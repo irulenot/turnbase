@@ -26,6 +26,9 @@ Application::Application()
 {
     mWindow.setKeyRepeatEnabled(false);
     
+    
+    
+    
     sf::Texture texture;
     if (!texture.loadFromFile(resourcePath() + "Mountain.png")) {
         return EXIT_FAILURE;

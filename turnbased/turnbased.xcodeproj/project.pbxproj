@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2AAE911B9E6D34006A474B /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AAE8F1B9E6D34006A474B /* State.cpp */; };
+		2D2AAE951B9E7118006A474B /* StateStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D2AAE931B9E7118006A474B /* StateStack.cpp */; };
 		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
 		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */; };
@@ -20,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2AAE8F1B9E6D34006A474B /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		2D2AAE901B9E6D34006A474B /* State.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = State.hpp; sourceTree = "<group>"; };
+		2D2AAE921B9E6D97006A474B /* StateIdentifiers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateIdentifiers.hpp; sourceTree = "<group>"; };
+		2D2AAE931B9E7118006A474B /* StateStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateStack.cpp; sourceTree = "<group>"; };
+		2D2AAE941B9E7118006A474B /* StateStack.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = StateStack.hpp; sourceTree = "<group>"; };
 		2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneNode.cpp; sourceTree = "<group>"; };
 		2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SceneNode.hpp; sourceTree = "<group>"; };
 		2D612C731B9CD80500F1BCC1 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
@@ -52,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D2AAE961B9E7ED9006A474B /* States, Stack, IDs */ = {
+			isa = PBXGroup;
+			children = (
+				2D2AAE8F1B9E6D34006A474B /* State.cpp */,
+				2D2AAE901B9E6D34006A474B /* State.hpp */,
+				2D2AAE921B9E6D97006A474B /* StateIdentifiers.hpp */,
+				2D2AAE931B9E7118006A474B /* StateStack.cpp */,
+				2D2AAE941B9E7118006A474B /* StateStack.hpp */,
+			);
+			name = "States, Stack, IDs";
+			sourceTree = "<group>";
+		};
 		D248002D1B98549E00E0D5CC = {
 			isa = PBXGroup;
 			children = (
@@ -73,17 +92,18 @@
 			children = (
 				D24800611B98553000E0D5CC /* Application.cpp */,
 				D24800621B98553000E0D5CC /* Application.hpp */,
-				D24800631B98553000E0D5CC /* main.cpp */,
-				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
-				D2E782B51B9CD85B008F5E7A /* Utilities and Macros */,
-				D24800411B98549E00E0D5CC /* Resources */,
-				D248003A1B98549E00E0D5CC /* Supporting Files */,
-				2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */,
-				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,
 				2D612C731B9CD80500F1BCC1 /* Entity.cpp */,
 				2D612C741B9CD80500F1BCC1 /* Entity.hpp */,
+				D24800631B98553000E0D5CC /* main.cpp */,
+				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
+				2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */,
+				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,
 				2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */,
 				2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */,
+				D24800411B98549E00E0D5CC /* Resources */,
+				2D2AAE961B9E7ED9006A474B /* States, Stack, IDs */,
+				D248003A1B98549E00E0D5CC /* Supporting Files */,
+				D2E782B51B9CD85B008F5E7A /* Utilities and Macros */,
 			);
 			path = turnbased;
 			sourceTree = "<group>";
@@ -208,7 +228,9 @@
 				D24800651B98553000E0D5CC /* main.cpp in Sources */,
 				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,
 				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,
+				2D2AAE911B9E6D34006A474B /* State.cpp in Sources */,
 				2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */,
+				2D2AAE951B9E7118006A474B /* StateStack.cpp in Sources */,
 				D24800641B98553000E0D5CC /* Application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
