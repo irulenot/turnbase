@@ -8,11 +8,12 @@
 
 #include "Application.hpp"
 #include "ResourcePath.hpp"
-#include "StringHelper.hpp"
 #include "State.hpp"
 #include "StateIdentifiers.hpp"
 #include "TitleState.hpp"
+#include "Utility.hpp"
 
+#include <iostream>
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
@@ -20,10 +21,13 @@
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode(1234, 732), "Gameplay", sf::Style::Close)
+: mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mStateStack(State::Context(mWindow, mTextures, mFonts))
+, mStatisticsText()
+, mStatisticsUpdateTime()
+, mStatisticsNumFrames(0)
 {
     mWindow.setKeyRepeatEnabled(false);
     mWindow.setVerticalSyncEnabled(true);
@@ -31,16 +35,17 @@ Application::Application()
     
     mFonts.load(Fonts::Main, resourcePath() + "sansation.ttf");
     
-    mTextures.load(Textures::TitleScreen, resourcePath() + "Mountain.png");
+    mTextures.load(Textures::TitleScreen, resourcePath() + "TitleScreen.png");
     
     mStatisticsText.setFont(mFonts.get(Fonts::Main));
     mStatisticsText.setPosition(5.f, 5.f);
     mStatisticsText.setCharacterSize(10u);
     
     registerStates();
+    
+    
     mStateStack.pushState(States::Title);   // Initialize title screen
-
-     
+    
 }
 
 void Application::run()
@@ -59,6 +64,7 @@ void Application::run()
             processInput();
             update(TimePerFrame);
             
+            
             // Check inside this loop, because stack might be empty before update() call
             if (mStateStack.isEmpty())
                 mWindow.close();
@@ -73,6 +79,7 @@ void Application::run()
 void Application::processInput()
 {
     sf::Event event;
+    
     while (mWindow.pollEvent(event))
     {
         mStateStack.handleEvent(event);

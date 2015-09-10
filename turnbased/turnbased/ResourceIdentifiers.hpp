@@ -21,6 +21,7 @@ namespace Textures
     {
         Mountain,
         TitleScreen,
+        Buttons,
     };
 }
 

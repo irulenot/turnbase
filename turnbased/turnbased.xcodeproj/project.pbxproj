@@ -15,6 +15,12 @@
 		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
 		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */; };
+		2DFFB9371BA1186B00D5A9AD /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */; };
+		2DFFB93A1BA11A0A00D5A9AD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9391BA11A0A00D5A9AD /* Component.cpp */; };
+		2DFFB93D1BA11AB200D5A9AD /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB93C1BA11AB200D5A9AD /* Container.cpp */; };
+		2DFFB9411BA11BDE00D5A9AD /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9401BA11BDE00D5A9AD /* Button.cpp */; };
+		2DFFB9431BA11CF800D5A9AD /* Buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFFB9421BA11CF800D5A9AD /* Buttons.png */; };
+		2DFFB9471BA125DA00D5A9AD /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */; };
 		D24800641B98553000E0D5CC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800611B98553000E0D5CC /* Application.cpp */; };
 		D24800651B98553000E0D5CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800631B98553000E0D5CC /* main.cpp */; };
 		D248006E1B98553700E0D5CC /* Mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = D24800661B98553700E0D5CC /* Mountain.png */; };
@@ -30,7 +36,6 @@
 		2D2AAE921B9E6D97006A474B /* StateIdentifiers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateIdentifiers.hpp; sourceTree = "<group>"; };
 		2D2AAE931B9E7118006A474B /* StateStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateStack.cpp; sourceTree = "<group>"; };
 		2D2AAE941B9E7118006A474B /* StateStack.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = StateStack.hpp; sourceTree = "<group>"; };
-		2D2AAE971B9E8340006A474B /* StringHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringHelper.hpp; sourceTree = "<group>"; };
 		2D2AAE9A1B9E8993006A474B /* TitleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TitleState.cpp; sourceTree = "<group>"; };
 		2D2AAE9C1B9E89A2006A474B /* TitleState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TitleState.hpp; sourceTree = "<group>"; };
 		2D2AAE9D1B9E8A42006A474B /* Utility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
@@ -43,6 +48,16 @@
 		2D612C761B9CE59000F1BCC1 /* Foreach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpriteNode.hpp; sourceTree = "<group>"; };
+		2DFFB9351BA1185E00D5A9AD /* MenuState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenuState.hpp; sourceTree = "<group>"; };
+		2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuState.cpp; sourceTree = "<group>"; };
+		2DFFB9381BA119F600D5A9AD /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		2DFFB9391BA11A0A00D5A9AD /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		2DFFB93B1BA11A9700D5A9AD /* Container.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Container.hpp; sourceTree = "<group>"; };
+		2DFFB93C1BA11AB200D5A9AD /* Container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Container.cpp; sourceTree = "<group>"; };
+		2DFFB93F1BA11BCF00D5A9AD /* Button.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		2DFFB9401BA11BDE00D5A9AD /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		2DFFB9421BA11CF800D5A9AD /* Buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buttons.png; sourceTree = "<group>"; };
+		2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
 		D24800371B98549E00E0D5CC /* turnbased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnbased.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24800611B98553000E0D5CC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
@@ -78,8 +93,23 @@
 				2D2AAE941B9E7118006A474B /* StateStack.hpp */,
 				2D2AAE9A1B9E8993006A474B /* TitleState.cpp */,
 				2D2AAE9C1B9E89A2006A474B /* TitleState.hpp */,
+				2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */,
+				2DFFB9351BA1185E00D5A9AD /* MenuState.hpp */,
 			);
 			name = "States, Stack, IDs";
+			sourceTree = "<group>";
+		};
+		2DFFB93E1BA11BAB00D5A9AD /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				2DFFB9401BA11BDE00D5A9AD /* Button.cpp */,
+				2DFFB93F1BA11BCF00D5A9AD /* Button.hpp */,
+				2DFFB9391BA11A0A00D5A9AD /* Component.cpp */,
+				2DFFB9381BA119F600D5A9AD /* Component.hpp */,
+				2DFFB93C1BA11AB200D5A9AD /* Container.cpp */,
+				2DFFB93B1BA11A9700D5A9AD /* Container.hpp */,
+			);
+			name = GUI;
 			sourceTree = "<group>";
 		};
 		D248002D1B98549E00E0D5CC = {
@@ -101,12 +131,12 @@
 		D24800391B98549E00E0D5CC /* turnbased */ = {
 			isa = PBXGroup;
 			children = (
+				2DFFB93E1BA11BAB00D5A9AD /* GUI */,
 				D24800611B98553000E0D5CC /* Application.cpp */,
 				D24800621B98553000E0D5CC /* Application.hpp */,
 				2D612C731B9CD80500F1BCC1 /* Entity.cpp */,
 				2D612C741B9CD80500F1BCC1 /* Entity.hpp */,
 				D24800631B98553000E0D5CC /* main.cpp */,
-				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
 				2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */,
 				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,
 				2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */,
@@ -130,7 +160,10 @@
 		D24800411B98549E00E0D5CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */,
+				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
 				D24800661B98553700E0D5CC /* Mountain.png */,
+				2DFFB9421BA11CF800D5A9AD /* Buttons.png */,
 				D248006D1B98553700E0D5CC /* Sansation.ttf */,
 			);
 			name = Resources;
@@ -144,7 +177,6 @@
 				D24800691B98553700E0D5CC /* ResourceHolder.inl */,
 				D248006C1B98553700E0D5CC /* ResourcePath.mm */,
 				D248006B1B98553700E0D5CC /* ResourcePath.hpp */,
-				2D2AAE971B9E8340006A474B /* StringHelper.hpp */,
 				2D2AAE9D1B9E8A42006A474B /* Utility.hpp */,
 				2D2AAE9E1B9E8A42006A474B /* Utility.inl */,
 				2D2AAEA01B9E8A51006A474B /* Utility.cpp */,
@@ -209,7 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFFB9471BA125DA00D5A9AD /* TitleScreen.png in Resources */,
 				D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */,
+				2DFFB9431BA11CF800D5A9AD /* Buttons.png in Resources */,
 				2D2AAE9F1B9E8A42006A474B /* Utility.inl in Resources */,
 				D24800721B98553700E0D5CC /* Sansation.ttf in Resources */,
 				D248006E1B98553700E0D5CC /* Mountain.png in Resources */,
@@ -243,11 +277,15 @@
 				D24800711B98553700E0D5CC /* ResourcePath.mm in Sources */,
 				D24800651B98553000E0D5CC /* main.cpp in Sources */,
 				2D2AAEA11B9E8A51006A474B /* Utility.cpp in Sources */,
+				2DFFB9411BA11BDE00D5A9AD /* Button.cpp in Sources */,
 				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,
 				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,
 				2D2AAE911B9E6D34006A474B /* State.cpp in Sources */,
 				2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */,
+				2DFFB9371BA1186B00D5A9AD /* MenuState.cpp in Sources */,
 				2D2AAE9B1B9E8993006A474B /* TitleState.cpp in Sources */,
+				2DFFB93D1BA11AB200D5A9AD /* Container.cpp in Sources */,
+				2DFFB93A1BA11A0A00D5A9AD /* Component.cpp in Sources */,
 				2D2AAE951B9E7118006A474B /* StateStack.cpp in Sources */,
 				D24800641B98553000E0D5CC /* Application.cpp in Sources */,
 			);

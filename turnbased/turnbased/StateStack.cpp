@@ -10,7 +10,9 @@
 #include "Foreach.hpp"
 
 #include <cassert>
-
+#include <iostream>
+#include <algorithm>
+#include <iterator>
 
 StateStack::StateStack(State::Context context)
 : mStack()
@@ -53,7 +55,11 @@ void StateStack::handleEvent(sf::Event &event)
 void StateStack::pushState(States::ID stateID)
 {
     mPendingList.push_back(PendingChange(Push, stateID));
+    
 }
+
+
+
 
 void StateStack::popState()
 {

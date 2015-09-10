@@ -24,6 +24,7 @@ class StateStack;
 namespace sf
 {
     class RenderWindow;
+    class Event;
 }
 
 class State

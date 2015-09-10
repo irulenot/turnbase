@@ -21,6 +21,11 @@
 #include <functional>
 #include <map>
 
+namespace sf
+{
+    class RenderWindow;
+    class Event;
+}
 class StateStack : private sf::NonCopyable
 {
 public:
@@ -54,7 +59,7 @@ private:
 private:
     struct PendingChange
     {
-        explicit			PendingChange(Action action, States::ID stateID = States::None);
+        explicit		PendingChange(Action action, States::ID stateID = States::None);
         
         Action          action;
         States::ID      stateID;
