@@ -48,6 +48,7 @@
 		2D612C761B9CE59000F1BCC1 /* Foreach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpriteNode.hpp; sourceTree = "<group>"; };
+		2DCFEF961BA2180A00306E15 /* BattleState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = BattleState.hpp; sourceTree = "<group>"; };
 		2DFFB9351BA1185E00D5A9AD /* MenuState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenuState.hpp; sourceTree = "<group>"; };
 		2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuState.cpp; sourceTree = "<group>"; };
 		2DFFB9381BA119F600D5A9AD /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 				2D2AAE9C1B9E89A2006A474B /* TitleState.hpp */,
 				2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */,
 				2DFFB9351BA1185E00D5A9AD /* MenuState.hpp */,
+				2DCFEF961BA2180A00306E15 /* BattleState.hpp */,
 			);
 			name = "States, Stack, IDs";
 			sourceTree = "<group>";

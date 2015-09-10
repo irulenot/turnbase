@@ -32,7 +32,7 @@ MenuState::MenuState(StateStack& stack, Context context)
                             });
     
     auto exitButton = std::make_shared<GUI::Button>(context);
-    exitButton->setPosition(100, 500);
+    exitButton->setPosition(100, 350);
     exitButton->setText("Exit");
     exitButton->setCallback([this] ()
                             {

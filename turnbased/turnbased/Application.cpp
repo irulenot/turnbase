@@ -11,6 +11,7 @@
 #include "State.hpp"
 #include "StateIdentifiers.hpp"
 #include "TitleState.hpp"
+#include "MenuState.hpp"
 #include "Utility.hpp"
 
 #include <iostream>
@@ -37,6 +38,8 @@ mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
     mFonts.load(Fonts::Main, resourcePath() + "sansation.ttf");
     
     mTextures.load(Textures::TitleScreen, resourcePath() + "TitleScreen.png");
+    
+    mTextures.load(Textures::Buttons, resourcePath() + "Buttons.png");
     
     mStatisticsText.setFont(mFonts.get(Fonts::Main));
     mStatisticsText.setPosition(5.f, 5.f);
@@ -122,8 +125,9 @@ void Application::updateStatistics(sf::Time dt)
 }
 void Application::registerStates()
 {
-    mStateStack.registerState<TitleState>
-        (States::Title);
+    mStateStack.registerState<TitleState>(States::Title);
+    mStateStack.registerState<MenuState>(States::Menu);
+    
 
 }
 
