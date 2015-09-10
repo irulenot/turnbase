@@ -17,6 +17,7 @@ namespace States
         None,
         Title,
         Menu,
+        Battle,
     };
 }
 

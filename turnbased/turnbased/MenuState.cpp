@@ -28,7 +28,7 @@ MenuState::MenuState(StateStack& stack, Context context)
     playButton->setCallback([this] ()
                             {
                                 requestStackPop();
-                                //requestStackPush(States::Game);
+                                requestStackPush(States::Battle);
                             });
     
     auto exitButton = std::make_shared<GUI::Button>(context);
