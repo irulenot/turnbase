@@ -14,6 +14,10 @@
 
 class Hero : public Entity
 {
+    public:
+        Hero(int hp, int agi, int atk);
+
+    
     private:
         void updateCurrent(sf::Time dt);
     public:

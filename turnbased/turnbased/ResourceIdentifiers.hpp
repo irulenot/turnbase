@@ -22,6 +22,8 @@ namespace Textures
         Mountain,
         TitleScreen,
         Buttons,
+        Link,
+        BlueDragon,
     };
 }
 

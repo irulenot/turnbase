@@ -70,7 +70,7 @@
 		D23481801BA2230A00893517 /* BlueDragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueDragon.png; sourceTree = "<group>"; };
 		D23481841BA2233D00893517 /* Link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Link.png; sourceTree = "<group>"; };
 		D23481891BA223C800893517 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
-		D234818A1BA223C800893517 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		D234818A1BA223C800893517 /* Enemy.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = Enemy.hpp; sourceTree = "<group>"; };
 		D24800371B98549E00E0D5CC /* turnbased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnbased.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24800611B98553000E0D5CC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 				D234817C1BA21F4D00893517 /* Hero.cpp */,
 				D234817F1BA21F8300893517 /* Hero.hpp */,
 				D23481891BA223C800893517 /* Enemy.cpp */,
-				D234818A1BA223C800893517 /* Enemy.h */,
+				D234818A1BA223C800893517 /* Enemy.hpp */,
 				D24800631B98553000E0D5CC /* main.cpp */,
 				2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */,
 				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,

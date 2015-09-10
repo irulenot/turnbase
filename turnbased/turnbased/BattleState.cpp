@@ -7,12 +7,17 @@
 //
 
 #include "BattleState.hpp"
+#include "Hero.hpp"
+#include "Enemy.hpp"
 #include "Utility.hpp"
 #include "Button.hpp"
 #include "ResourceHolder.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
+
+class Hero;
+class Enemy;
 
 BattleState::BattleState(StateStack& stack, Context context)
 : State(stack, context)
@@ -22,16 +27,16 @@ BattleState::BattleState(StateStack& stack, Context context)
     mBackgroundSprite.setTexture(texture);
     
     auto atkButton = std::make_shared<GUI::Button>(context);
-    atkButton->setPosition(100, 668);
+    atkButton->setPosition(100, 618);
     atkButton->setText("Attack");
     atkButton->setCallback([this] ()
                             {
                                 requestStackPop();
-                                //requestStackPush(States::Game);
+
                             });
     
     auto runButton = std::make_shared<GUI::Button>(context);
-    runButton->setPosition(100, 618);
+    runButton->setPosition(100, 668);
     runButton->setText("Run");
     runButton->setCallback([this] ()
                             {
@@ -41,6 +46,9 @@ BattleState::BattleState(StateStack& stack, Context context)
     
     mGUIContainer.pack(atkButton);
     mGUIContainer.pack(runButton);
+    
+    
+    
     
 }
 

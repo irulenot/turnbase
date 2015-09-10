@@ -6,4 +6,4 @@
 //  Copyright (c) 2015 WandA. All rights reserved.
 //
 
-#include "Enemy.h"
+#include "Enemy.hpp"

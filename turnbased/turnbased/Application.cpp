@@ -7,6 +7,8 @@
 //
 
 #include "Application.hpp"
+#include "Hero.hpp"
+#include "Enemy.hpp"
 #include "ResourcePath.hpp"
 #include "State.hpp"
 #include "StateIdentifiers.hpp"
@@ -39,10 +41,12 @@ mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
     mFonts.load(Fonts::Main, resourcePath() + "sansation.ttf");
     
     mTextures.load(Textures::TitleScreen, resourcePath() + "TitleScreen.png");
-    
     mTextures.load(Textures::Mountain, resourcePath() + "Mountain.png");
     
     mTextures.load(Textures::Buttons, resourcePath() + "Buttons.png");
+    
+    mTextures.load(Textures::Link, resourcePath() + "Link.png");
+    mTextures.load(Textures::BlueDragon, resourcePath() + "BlueDragon.png");
     
     
     
