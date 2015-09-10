@@ -21,7 +21,8 @@
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
+:                                                                               //<-What does this colon do?
+mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mStateStack(State::Context(mWindow, mTextures, mFonts))
@@ -43,9 +44,15 @@ Application::Application()
     
     registerStates();
     
-    
     mStateStack.pushState(States::Title);   // Initialize title screen
     
+    /* This was a test to see if the state was initilized. Given the result 1, both when the initalization was implemented and it was not, I think it the state initalized correctly. I continued to StateStack.cpp line 55.
+    bool lol;
+    lol = mStateStack.isEmpty();
+    std::cout << lol;
+    */
+    
+
 }
 
 void Application::run()
@@ -122,7 +129,8 @@ void Application::updateStatistics(sf::Time dt)
 }
 void Application::registerStates()
 {
-    mStateStack.registerState<TitleState>(States::Title);
+    mStateStack.registerState<TitleState>
+        (States::Title);
 
 }
 

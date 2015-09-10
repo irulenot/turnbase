@@ -52,13 +52,13 @@ void StateStack::handleEvent(sf::Event &event)
     applyPendingChanges();
 }
 
+/* Why do you need the PendingChange class? Can you not just replace that with the stateID and it will push the state?*/
+
 void StateStack::pushState(States::ID stateID)
 {
     mPendingList.push_back(PendingChange(Push, stateID));
     
 }
-
-
 
 
 void StateStack::popState()

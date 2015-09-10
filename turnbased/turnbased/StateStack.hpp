@@ -21,7 +21,7 @@
 #include <functional>
 #include <map>
 
-namespace sf
+namespace sf 
 {
     class RenderWindow;
     class Event;
