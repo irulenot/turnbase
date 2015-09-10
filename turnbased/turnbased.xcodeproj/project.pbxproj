@@ -21,6 +21,10 @@
 		2DFFB9411BA11BDE00D5A9AD /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9401BA11BDE00D5A9AD /* Button.cpp */; };
 		2DFFB9431BA11CF800D5A9AD /* Buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFFB9421BA11CF800D5A9AD /* Buttons.png */; };
 		2DFFB9471BA125DA00D5A9AD /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */; };
+		D234817E1BA21F4D00893517 /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D234817C1BA21F4D00893517 /* Hero.cpp */; };
+		D23481821BA2230A00893517 /* BlueDragon.png in Resources */ = {isa = PBXBuildFile; fileRef = D23481801BA2230A00893517 /* BlueDragon.png */; };
+		D23481851BA2233D00893517 /* Link.png in Resources */ = {isa = PBXBuildFile; fileRef = D23481841BA2233D00893517 /* Link.png */; };
+		D234818B1BA223C800893517 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D23481891BA223C800893517 /* Enemy.cpp */; };
 		D24800641B98553000E0D5CC /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800611B98553000E0D5CC /* Application.cpp */; };
 		D24800651B98553000E0D5CC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D24800631B98553000E0D5CC /* main.cpp */; };
 		D248006E1B98553700E0D5CC /* Mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = D24800661B98553700E0D5CC /* Mountain.png */; };
@@ -59,6 +63,12 @@
 		2DFFB9401BA11BDE00D5A9AD /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		2DFFB9421BA11CF800D5A9AD /* Buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buttons.png; sourceTree = "<group>"; };
 		2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
+		D234817C1BA21F4D00893517 /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
+		D234817F1BA21F8300893517 /* Hero.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Hero.hpp; sourceTree = "<group>"; };
+		D23481801BA2230A00893517 /* BlueDragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueDragon.png; sourceTree = "<group>"; };
+		D23481841BA2233D00893517 /* Link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Link.png; sourceTree = "<group>"; };
+		D23481891BA223C800893517 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		D234818A1BA223C800893517 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		D24800371B98549E00E0D5CC /* turnbased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnbased.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24800611B98553000E0D5CC /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		D24800621B98553000E0D5CC /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
@@ -138,6 +148,10 @@
 				D24800621B98553000E0D5CC /* Application.hpp */,
 				2D612C731B9CD80500F1BCC1 /* Entity.cpp */,
 				2D612C741B9CD80500F1BCC1 /* Entity.hpp */,
+				D234817C1BA21F4D00893517 /* Hero.cpp */,
+				D234817F1BA21F8300893517 /* Hero.hpp */,
+				D23481891BA223C800893517 /* Enemy.cpp */,
+				D234818A1BA223C800893517 /* Enemy.h */,
 				D24800631B98553000E0D5CC /* main.cpp */,
 				2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */,
 				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,
@@ -162,6 +176,8 @@
 		D24800411B98549E00E0D5CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D23481801BA2230A00893517 /* BlueDragon.png */,
+				D23481841BA2233D00893517 /* Link.png */,
 				2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */,
 				D248006A1B98553700E0D5CC /* ResourceIdentifiers.hpp */,
 				D24800661B98553700E0D5CC /* Mountain.png */,
@@ -243,10 +259,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23481851BA2233D00893517 /* Link.png in Resources */,
 				2DFFB9471BA125DA00D5A9AD /* TitleScreen.png in Resources */,
 				D24800701B98553700E0D5CC /* ResourceHolder.inl in Resources */,
 				2DFFB9431BA11CF800D5A9AD /* Buttons.png in Resources */,
 				2D2AAE9F1B9E8A42006A474B /* Utility.inl in Resources */,
+				D23481821BA2230A00893517 /* BlueDragon.png in Resources */,
 				D24800721B98553700E0D5CC /* Sansation.ttf in Resources */,
 				D248006E1B98553700E0D5CC /* Mountain.png in Resources */,
 				D248006F1B98553700E0D5CC /* turnbased-Info.plist in Resources */,
@@ -284,7 +302,9 @@
 				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,
 				2D2AAE911B9E6D34006A474B /* State.cpp in Sources */,
 				2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */,
+				D234818B1BA223C800893517 /* Enemy.cpp in Sources */,
 				2DFFB9371BA1186B00D5A9AD /* MenuState.cpp in Sources */,
+				D234817E1BA21F4D00893517 /* Hero.cpp in Sources */,
 				2D2AAE9B1B9E8993006A474B /* TitleState.cpp in Sources */,
 				2DFFB93D1BA11AB200D5A9AD /* Container.cpp in Sources */,
 				2DFFB93A1BA11A0A00D5A9AD /* Component.cpp in Sources */,

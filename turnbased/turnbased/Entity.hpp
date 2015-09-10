@@ -13,18 +13,18 @@
 
 class Entity : public SceneNode
 {
-private:
-    int healthStat;
-    int agilityStat;
-    int healthCurrent;
-    int basicAtk;
-    
-    virtual void updateCurrent(sf::Time dt);
+    private:
+        int healthStat;
+        int agilityStat;
+        int healthCurrent;
+        int basicAtk;
+        
+        virtual void updateCurrent(sf::Time dt);
 
-public:
-    Entity(int hp, int agi, int atk);
-    void takeDmg(int dmg);
-    int giveAtk();
+    public:
+        Entity(int hp, int agi, int atk);
+        void takeDmg(int dmg);
+        int giveAtk();
     
 };
 
