@@ -16,9 +16,10 @@ class Entity : public SceneNode
     private:
         int healthStat;
         int agilityStat;
+        int attackStat;
         int healthCurrent;
-        int basicAtk;
-        
+        int agilityCurrent;
+    
         virtual void updateCurrent(sf::Time dt);
 
     public:

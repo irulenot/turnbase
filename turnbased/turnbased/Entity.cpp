@@ -12,15 +12,16 @@ Entity::Entity(int hp, int agi, int atk)
 :
 healthStat(hp),
 agilityStat(agi),
+attackStat(atk),
 healthCurrent(hp),
-basicAtk(atk)
+agilityCurrent(agi)
 {}
 
 void Entity::takeDmg(int dmg)
     {this->healthCurrent = (this->healthCurrent) - (dmg);}
 
 int Entity::giveAtk()
-    {return this->basicAtk;}
+    {return this->attackStat;}
 
 void Entity::updateCurrent(sf::Time dt)
 {
