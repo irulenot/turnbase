@@ -45,13 +45,6 @@ mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
     registerStates();
     
     mStateStack.pushState(States::Title);   // Initialize title screen
-    
-    /* This was a test to see if the state was initilized. Given the result 1, both when the initalization was implemented and it was not, I think it the state initalized correctly. I continued to StateStack.cpp line 55.
-    bool lol;
-    lol = mStateStack.isEmpty();
-    std::cout << lol;
-    */
-    
 
 }
 
