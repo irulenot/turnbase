@@ -31,6 +31,8 @@ void StateStack::update(sf::Time dt)
         if (!(*itr)->update(dt))
             break;
     }
+    
+    applyPendingChanges();
 }
 
 void StateStack::draw()
@@ -54,11 +56,7 @@ void StateStack::handleEvent(sf::Event &event)
 
 void StateStack::pushState(States::ID stateID)
 {
-    
     mPendingList.push_back(PendingChange(Push, stateID));
-    
-    applyPendingChanges(); // This is here because it works...pending states are now activates
-
 }
 
 
