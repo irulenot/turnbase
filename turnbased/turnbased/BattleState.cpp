@@ -23,16 +23,12 @@ BattleState::BattleState(StateStack& stack, Context context)
 : State(stack, context)
 , mGUIContainer()
 {
-    sf::Texture& texture = context.textures->get(Textures::Mountain);
-    mBackgroundSprite.setTexture(texture);
-    
     auto atkButton = std::make_shared<GUI::Button>(context);
     atkButton->setPosition(100, 618);
     atkButton->setText("Attack");
     atkButton->setCallback([this] ()
                             {
                                 requestStackPop();
-
                             });
     
     auto runButton = std::make_shared<GUI::Button>(context);
@@ -46,9 +42,6 @@ BattleState::BattleState(StateStack& stack, Context context)
     
     mGUIContainer.pack(atkButton);
     mGUIContainer.pack(runButton);
-    
-    
-    
     
 }
 
@@ -70,3 +63,18 @@ bool BattleState::handleEvent(const sf::Event& event)
     mGUIContainer.handleEvent(event);
     return false;
 }
+
+void BattleState::loadTextures()
+{
+    mTextures.load(Textures::Mountain, resourcePath() + "Mountain.png");
+    mTextures.load(Textures::Link, resourcePath() + "Link.png");
+    mTextures.load(Textures::BlueDragon, resourcePath() + "BlueDragon.png");
+
+}
+
+void BattleState::buildScene()
+{
+    sf::Texture& texture = context.textures->get(Textures::Mountain);
+    mBackgroundSprite.setTexture(texture);
+}
+

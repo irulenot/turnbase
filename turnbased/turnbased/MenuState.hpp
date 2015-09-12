@@ -28,6 +28,7 @@ public:
 private:
     sf::Sprite				mBackgroundSprite;
     GUI::Container          mGUIContainer;
+
 };
 
 
