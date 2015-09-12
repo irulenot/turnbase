@@ -15,6 +15,7 @@
 		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
 		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */; };
+		2DC9080C1BA4C75A0045C5A5 /* DataTables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9080B1BA4C75A0045C5A5 /* DataTables.cpp */; };
 		2DCFEF981BA21A1900306E15 /* BattleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFEF971BA21A1900306E15 /* BattleState.cpp */; };
 		2DFFB9371BA1186B00D5A9AD /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */; };
 		2DFFB93A1BA11A0A00D5A9AD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9391BA11A0A00D5A9AD /* Component.cpp */; };
@@ -53,6 +54,8 @@
 		2D612C761B9CE59000F1BCC1 /* Foreach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpriteNode.hpp; sourceTree = "<group>"; };
+		2DC9080A1BA4C6960045C5A5 /* DataTables.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataTables.hpp; sourceTree = "<group>"; };
+		2DC9080B1BA4C75A0045C5A5 /* DataTables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataTables.cpp; sourceTree = "<group>"; };
 		2DCFEF961BA2180A00306E15 /* BattleState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = BattleState.hpp; sourceTree = "<group>"; };
 		2DCFEF971BA21A1900306E15 /* BattleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleState.cpp; sourceTree = "<group>"; };
 		2DFFB9351BA1185E00D5A9AD /* MenuState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenuState.hpp; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				2DFFB93E1BA11BAB00D5A9AD /* GUI */,
 				D24800611B98553000E0D5CC /* Application.cpp */,
 				D24800621B98553000E0D5CC /* Application.hpp */,
+				2DC9080A1BA4C6960045C5A5 /* DataTables.hpp */,
+				2DC9080B1BA4C75A0045C5A5 /* DataTables.cpp */,
 				2D612C731B9CD80500F1BCC1 /* Entity.cpp */,
 				2D612C741B9CD80500F1BCC1 /* Entity.hpp */,
 				D234817C1BA21F4D00893517 /* Hero.cpp */,
@@ -301,6 +306,7 @@
 				D24800651B98553000E0D5CC /* main.cpp in Sources */,
 				2DCFEF981BA21A1900306E15 /* BattleState.cpp in Sources */,
 				2D2AAEA11B9E8A51006A474B /* Utility.cpp in Sources */,
+				2DC9080C1BA4C75A0045C5A5 /* DataTables.cpp in Sources */,
 				2DFFB9411BA11BDE00D5A9AD /* Button.cpp in Sources */,
 				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,
 				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,

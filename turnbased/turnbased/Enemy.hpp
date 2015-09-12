@@ -1,5 +1,5 @@
 //
-//  Enemy.h
+//  Enemy.hpp
 //  turnbased
 //
 //  Created by Anthony Bilic on 9/10/15.
@@ -9,7 +9,6 @@
 #ifndef __turnbased__Enemy__
 #define __turnbased__Enemy__
 
-#include <stdio.h>
 #include "Entity.hpp"
 
 class Enemy : public Entity
@@ -17,6 +16,8 @@ class Enemy : public Entity
 private:
     void updateCurrent(sf::Time dt);
 public:
+    Enemy(int hp, int agi, int atk);
+    Enemy();
     
 };
 

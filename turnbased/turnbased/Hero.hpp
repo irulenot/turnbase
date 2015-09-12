@@ -1,5 +1,5 @@
 //
-//  Hero.h
+//  Hero.hpp
 //  turnbased
 //
 //  Created by Anthony Bilic on 9/10/15.
@@ -9,18 +9,32 @@
 #ifndef __turnbased__Hero__
 #define __turnbased__Hero__
 
-#include <stdio.h>
 #include "Entity.hpp"
+#include "ResourceHolder.hpp"
+#include "ResourceIdentifiers.hpp"
+
+#include <SFML/Graphics/Sprite.hpp>
+
 
 class Hero : public Entity
 {
     public:
-        Hero(int hp, int agi, int atk);
-
+        enum Actor
+        {
+            Link,
+            ActorCount,
+        };
+    public:
+        Hero(Actor actor, const TextureHolder& textures);
     
     private:
-        void updateCurrent(sf::Time dt);
-    public:
+        virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
+    
+    private:
+        Actor					mActor;
+        sf::Sprite				mSprite;
+    
+   
     
 };
 

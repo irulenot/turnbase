@@ -7,11 +7,40 @@
 //
 
 #include "Hero.hpp"
+#include "ResourceHolder.hpp"
+#include "Utility.hpp"
+#include "DataTables.hpp"
 
-/*Hero::Hero(int hp, int agi, int atk)
-:
-healthStat(hp),
-agilityStat(agi),
-healthCurrent(hp),
-basicAtk(atk)
-{}*/
+
+#include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
+
+
+namespace
+{
+    const std::vector<HeroData> Table = initializeHeroData();
+}
+
+Textures::ID toTextureID(Hero::Actor actor)
+{
+    switch (actor)
+    {
+        case Hero::Link:
+            return Textures::Link;
+            break;
+    }
+}
+
+Hero::Hero(Actor actor, const TextureHolder& textures)
+: Entity(Table[actor].hitpoints, Table[actor].agility, Table[actor].attack)
+, mActor(actor)
+, mSprite(textures.get(toTextureID(actor)))
+{
+    centerOrigin(mSprite);
+}
+
+
+void Hero::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
+{
+    target.draw(mSprite, states);
+}

@@ -7,29 +7,25 @@
 //
 
 #include "BattleState.hpp"
-#include "Hero.hpp"
-#include "Enemy.hpp"
 #include "Utility.hpp"
 #include "Button.hpp"
 #include "ResourceHolder.hpp"
 
+
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
-
-class Hero;
-class Enemy;
 
 BattleState::BattleState(StateStack& stack, Context context)
 : State(stack, context)
 , mGUIContainer()
+, mHero(nullptr)
+, mTextures()
 {
+    loadTextures();
+    
     auto atkButton = std::make_shared<GUI::Button>(context);
     atkButton->setPosition(100, 618);
     atkButton->setText("Attack");
-    atkButton->setCallback([this] ()
-                            {
-                                requestStackPop();
-                            });
     
     auto runButton = std::make_shared<GUI::Button>(context);
     runButton->setPosition(100, 668);
@@ -43,6 +39,7 @@ BattleState::BattleState(StateStack& stack, Context context)
     mGUIContainer.pack(atkButton);
     mGUIContainer.pack(runButton);
     
+    buildScene();
 }
 
 void BattleState::draw()
@@ -50,11 +47,13 @@ void BattleState::draw()
     sf::RenderWindow& window = *getContext().window;
     window.setView(window.getDefaultView());
     window.draw(mBackgroundSprite);
+    window.draw(*mHero);
     window.draw(mGUIContainer);
 }
 
 bool BattleState::update(sf::Time)
 {
+    
     return true;
 }
 
@@ -74,7 +73,13 @@ void BattleState::loadTextures()
 
 void BattleState::buildScene()
 {
-    sf::Texture& texture = context.textures->get(Textures::Mountain);
-    mBackgroundSprite.setTexture(texture);
+    sf::Texture& mountainTexture = mTextures.get(Textures::Mountain);
+    mBackgroundSprite.setTexture(mountainTexture);
+    
+    std::unique_ptr<Hero> hero(new Hero(Hero::Link, mTextures));
+    mHero = hero.get();
+    mHero->setPosition(750, 300);
+    
+
 }
 

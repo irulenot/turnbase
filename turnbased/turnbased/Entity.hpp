@@ -14,18 +14,22 @@
 class Entity : public SceneNode
 {
     private:
-        int healthStat;
-        int agilityStat;
-        int attackStat;
-        int healthCurrent;
-        int agilityCurrent;
+        int mHitpoints;
+        int mAgility;
+        int mAttack;
     
         virtual void updateCurrent(sf::Time dt);
 
     public:
         Entity(int hp, int agi, int atk);
         void takeDmg(int dmg);
+        int giveSpd();
         int giveAtk();
+        int giveCurAgi();
+        int giveCurHlt();
+        void changeHlt(int affect);
+        void clearCurAgi();
+        void resetCurAgi();
     
 };
 

@@ -8,11 +8,18 @@
 
 #include "State.hpp"
 #include "Container.hpp"
+#include "SpriteNode.hpp"
+#include "SceneNode.hpp"
+#include "Hero.hpp"
+//#include "Enemy.hpp"
 #include "ResourceHolder.hpp"
 #include "ResourcePath.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
+#include <SFML/System/NonCopyable.hpp>
+#include <SFML/Graphics/View.hpp>
+#include <SFML/Graphics/Texture.hpp>
 
 #ifndef turnbased_BattleState_hpp
 #define turnbased_BattleState_hpp
@@ -32,8 +39,10 @@ private:
     void                buildScene();
     
 private:
-    sf::Sprite          mBackgroundSprite;
     sf::Text            mText;
+
+    Hero*               mHero;
+    sf::Sprite          mBackgroundSprite;
     TextureHolder       mTextures;
     
     GUI::Container      mGUIContainer;
