@@ -25,7 +25,13 @@ class Entity : public SceneNode
     public:
         Entity(int hp, int agi, int atk);
         void takeDmg(int dmg);
+        int giveSpd();
         int giveAtk();
+        int giveCurAgi();
+        int giveCurHlt();
+        void changeHlt(int affect);
+        void clearCurAgi();
+        void resetCurAgi();
     
 };
 

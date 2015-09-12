@@ -17,6 +17,8 @@ class Enemy : public Entity
 private:
     void updateCurrent(sf::Time dt);
 public:
+    Enemy(int hp, int agi, int atk);
+    Enemy();
     
 };
 

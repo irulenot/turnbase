@@ -13,27 +13,24 @@
 #include "Button.hpp"
 #include "ResourceHolder.hpp"
 
+
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
-
-class Hero;
-class Enemy;
 
 BattleState::BattleState(StateStack& stack, Context context)
 : State(stack, context)
 , mGUIContainer()
 {
+    Hero link(10,2,2);
+    Enemy dragon(10,1,1);
+    
     sf::Texture& texture = context.textures->get(Textures::Mountain);
     mBackgroundSprite.setTexture(texture);
     
     auto atkButton = std::make_shared<GUI::Button>(context);
     atkButton->setPosition(100, 618);
     atkButton->setText("Attack");
-    atkButton->setCallback([this] ()
-                            {
-                                requestStackPop();
-
-                            });
+    
     
     auto runButton = std::make_shared<GUI::Button>(context);
     runButton->setPosition(100, 668);
@@ -46,9 +43,7 @@ BattleState::BattleState(StateStack& stack, Context context)
     
     mGUIContainer.pack(atkButton);
     mGUIContainer.pack(runButton);
-    
-    
-    
+
     
 }
 
@@ -62,6 +57,8 @@ void BattleState::draw()
 
 bool BattleState::update(sf::Time)
 {
+    
+    
     return true;
 }
 

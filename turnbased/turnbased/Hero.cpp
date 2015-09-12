@@ -7,11 +7,3 @@
 //
 
 #include "Hero.hpp"
-
-/*Hero::Hero(int hp, int agi, int atk)
-:
-healthStat(hp),
-agilityStat(agi),
-healthCurrent(hp),
-basicAtk(atk)
-{}*/
