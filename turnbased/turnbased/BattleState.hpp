@@ -11,7 +11,6 @@
 #include "SpriteNode.hpp"
 #include "SceneNode.hpp"
 #include "Hero.hpp"
-//#include "Enemy.hpp"
 #include "ResourceHolder.hpp"
 #include "ResourcePath.hpp"
 
@@ -20,6 +19,9 @@
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/Texture.hpp>
+
+#include <array>
+#include <queue>
 
 #ifndef turnbased_BattleState_hpp
 #define turnbased_BattleState_hpp
@@ -39,11 +41,23 @@ private:
     void                buildScene();
     
 private:
+    enum Layer
+    {
+        Background,
+        Actors,
+        LayerCount
+    };
+    
+private:
     sf::Text            mText;
 
     Hero*               mHero;
     sf::Sprite          mBackgroundSprite;
     TextureHolder       mTextures;
+    SceneNode           mSceneGraph;
+    
+    std::array<SceneNode*, LayerCount>	mSceneLayers;
+
     
     GUI::Container      mGUIContainer;
 };

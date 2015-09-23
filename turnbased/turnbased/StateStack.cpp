@@ -75,7 +75,6 @@ bool StateStack::isEmpty() const
     return mStack.empty();
 }
 
-
 State::Ptr StateStack::createState(States::ID stateID)
 {
     auto found = mFactories.find(stateID);

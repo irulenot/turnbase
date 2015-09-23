@@ -8,7 +8,6 @@
 
 #include "Application.hpp"
 #include "Hero.hpp"
-#include "Enemy.hpp"
 #include "ResourcePath.hpp"
 #include "State.hpp"
 #include "StateIdentifiers.hpp"

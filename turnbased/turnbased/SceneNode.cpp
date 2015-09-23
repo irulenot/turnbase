@@ -49,8 +49,10 @@ void SceneNode::updateCurrent(sf::Time dt)
 
 void SceneNode::updateChildren(sf::Time dt)
 {
-    FOREACH(Ptr& child, mChildren)
-    child->update(dt);
+
+    for( const Ptr& child : mChildren)
+        child->update(dt);
+    
 }
 
 void SceneNode::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -67,8 +69,10 @@ void SceneNode::drawCurrent(sf::RenderTarget &target, sf::RenderStates states) c
 
 void SceneNode::drawChildren(sf::RenderTarget &target, sf::RenderStates states)const
 {
-    FOREACH(const Ptr& child, mChildren)
-    child->draw(target, states);
+    for (const Ptr& child : mChildren)
+    {
+        child->draw(target, states);
+    }
 }
 
 sf::Transform SceneNode::getWorldTransform() const
