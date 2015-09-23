@@ -13,23 +13,21 @@
 
 class Entity : public SceneNode
 {
-    private:
-        int mHitpoints;
-        int mAgility;
-        int mAttack;
+public:
+    void				setVelocity(sf::Vector2f velocity);
+    void				setVelocity(float vx, float vy);
+    void				accelerate(sf::Vector2f velocity);
+    void				accelerate(float vx, float vy);
+    sf::Vector2f		getVelocity() const;
     
-        virtual void updateCurrent(sf::Time dt);
+    
+private:
+    virtual void		updateCurrent(sf::Time dt);
+    
+    
+private:
+    sf::Vector2f		mVelocity;
 
-    public:
-        Entity(int hp, int agi, int atk);
-        void takeDmg(int dmg);
-        int giveSpd();
-        int giveAtk();
-        int giveCurAgi();
-        int giveCurHlt();
-        void changeHlt(int affect);
-        void clearCurAgi();
-        void resetCurAgi();
     
 };
 

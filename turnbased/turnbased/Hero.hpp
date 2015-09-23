@@ -25,9 +25,7 @@ class Hero : public Entity
             ActorCount,
         };
     public:
-        Hero(Actor actor, const TextureHolder& textures);
-    
-    private:
+        explicit                Hero(Actor actor, const TextureHolder& textures);
         virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
     
     private:

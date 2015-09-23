@@ -36,9 +36,6 @@ public:
     virtual bool        update(sf::Time dt);
     virtual bool        handleEvent(const sf::Event& event);
     
-private:
-    void                loadTextures();
-    void                buildScene();
     
 private:
     enum Layer

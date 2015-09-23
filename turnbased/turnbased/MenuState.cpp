@@ -24,11 +24,11 @@ MenuState::MenuState(StateStack& stack, Context context)
     
     auto playButton = std::make_shared<GUI::Button>(context);
     playButton->setPosition(100, 300);
-    playButton->setText("Play");
+    playButton->setText("New Game");
     playButton->setCallback([this] ()
                             {
                                 requestStackPop();
-                                requestStackPush(States::Battle);
+                                requestStackPush(States::Game);
                             });
     
     auto exitButton = std::make_shared<GUI::Button>(context);

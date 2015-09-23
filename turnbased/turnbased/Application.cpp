@@ -24,8 +24,8 @@
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-:                                                                               //<-What does this colon do?
-mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
+:
+  mWindow(sf::VideoMode(1024, 768), "Gameplay", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mStateStack(State::Context(mWindow, mTextures, mFonts))
@@ -133,6 +133,7 @@ void Application::registerStates()
 {
     mStateStack.registerState<TitleState>(States::Title);
     mStateStack.registerState<MenuState>(States::Menu);
+    mStateStack.registerState<GameState>(States::Game);
     mStateStack.registerState<BattleState>(States::Battle);
     
 

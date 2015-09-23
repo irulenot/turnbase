@@ -8,41 +8,35 @@
 
 #include "Entity.hpp"
 
-Entity::Entity(int hp, int agi, int atk)
-: mHitpoints(hp)
-, mAgility(agi)
-, mAttack(atk)
+void Entity::setVelocity(sf::Vector2f velocity)
 {
+    mVelocity = velocity;
 }
 
+void Entity::setVelocity(float vx, float vy)
+{
+    mVelocity.x = vx;
+    mVelocity.y = vy;
+}
 
-/*void Entity::takeDmg(int dmg)
-    {this->healthCurrent = (this->healthCurrent) - (dmg);}
+sf::Vector2f Entity::getVelocity() const
+{
+    return mVelocity;
+}
 
-int Entity::giveAtk()
-    {return this->attackStat;}
+void Entity::accelerate(sf::Vector2f velocity)
+{
+    mVelocity += velocity;
+}
 
-int Entity::giveSpd()
-    {return this->agilityStat;}
-
-int Entity::giveCurAgi()
-    {return this->agilityCurrent;}
-
-int Entity::giveCurHlt()
-    {return this->healthCurrent;}
-
-void Entity::changeHlt(int affect)
-    {this->healthCurrent = this->healthCurrent + affect;}
-
-void Entity::clearCurAgi()
-    {this->agilityCurrent = 0;}
-
-void Entity::resetCurAgi()
-{this->agilityCurrent = this->agilityStat;}*/
+void Entity::accelerate(float vx, float vy)
+{
+    mVelocity.x += vx;
+    mVelocity.y += vy;
+}
 
 void Entity::updateCurrent(sf::Time dt)
 {
-
+    move(mVelocity * dt.asSeconds());
 }
-
 

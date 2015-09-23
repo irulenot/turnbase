@@ -27,13 +27,13 @@ Textures::ID toTextureID(Hero::Actor actor)
     {
         case Hero::Link:
             return Textures::Link;
-            break;
+            
     }
 }
 
 Hero::Hero(Actor actor, const TextureHolder& textures)
-: Entity(Table[actor].hitpoints, Table[actor].agility, Table[actor].attack)
-, mActor(actor)
+: 
+  mActor(actor)
 , mSprite(textures.get(toTextureID(actor)))
 {
     centerOrigin(mSprite);
