@@ -20,11 +20,11 @@
 #include <memory>
 
 class StateStack;
+class Player;
 
 namespace sf
 {
     class RenderWindow;
-    class Event;
 }
 
 class State
@@ -34,11 +34,12 @@ public:
     
     struct Context
     {
-                            Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts);
+                            Context(sf::RenderWindow& window, TextureHolder& textures, FontHolder& fonts, Player& player);
         
         sf::RenderWindow*	window;
         TextureHolder*		textures;
         FontHolder*			fonts;
+        Player*				player;
     };
     
     

@@ -20,12 +20,25 @@
 
 class Hero;
 
+struct Direction
+{
+    Direction(float angle, float distance)
+    : angle(angle)
+    , distance(distance)
+    {
+    }
+    
+    float angle;
+    float distance;
+};
+
 struct HeroData
 {
-    int								hitpoints;
-    int                             agility;
-    int                             attack;
+    float							speed;
     Textures::ID					texture;
+    sf::IntRect						textureRect;
+    std::vector<Direction>			directions;
+    bool							hasMoveAnimation;
 };
 
 std::vector<HeroData>	initializeHeroData();

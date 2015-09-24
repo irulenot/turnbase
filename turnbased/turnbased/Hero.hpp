@@ -12,6 +12,7 @@
 #include "Entity.hpp"
 #include "ResourceHolder.hpp"
 #include "ResourceIdentifiers.hpp"
+#include "CommandQueue.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -22,11 +23,16 @@ class Hero : public Entity
         enum Actor
         {
             Link,
+            Cloud,
             ActorCount,
         };
     public:
         explicit                Hero(Actor actor, const TextureHolder& textures);
+    
+    private:
         virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
+        void					updateMoveAnimation();
+        virtual void 			updateCurrent(sf::Time dt, CommandQueue& commands);
     
     private:
         Actor					mActor;

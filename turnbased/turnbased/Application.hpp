@@ -8,6 +8,7 @@
 
 #include "ResourceHolder.hpp"
 #include "ResourceIdentifiers.hpp"
+#include "Player.hpp"
 #include "StateStack.hpp"
 
 #include <SFML/System/Time.hpp>
@@ -37,6 +38,7 @@ private:
     sf::RenderWindow        mWindow;
     TextureHolder           mTextures;
     FontHolder              mFonts;
+    Player                  mPlayer;
     StateStack				mStateStack;
     
     sf::Text				mStatisticsText;

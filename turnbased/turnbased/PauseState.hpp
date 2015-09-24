@@ -1,26 +1,23 @@
 //
-//  GameState.hpp
+//  PauseState.hpp
 //  turnbased
 //
 //  Created by Ian Wilson on 9/23/15.
 //  Copyright (c) 2015 WandA. All rights reserved.
 //
 
-#ifndef turnbased_GameState_hpp
-#define turnbased_GameState_hpp
+#ifndef __turnbased__PauseState__
+#define __turnbased__PauseState__
 
 #include "State.hpp"
-#include "World.hpp"
-#include "Player.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-
-class GameState : public State
+class PauseState : public State
 {
 public:
-    GameState(StateStack& stack, Context context);
+    PauseState(StateStack& stack, Context context);
     
     virtual void		draw();
     virtual bool		update(sf::Time dt);
@@ -28,8 +25,9 @@ public:
     
     
 private:
-    World				mWorld;
-    Player&				mPlayer;
+    sf::Sprite			mBackgroundSprite;
+    sf::Text			mPausedText;
+    sf::Text			mInstructionText;
 };
 
-#endif
+#endif /* defined(__turnbased__PauseState__) */

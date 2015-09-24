@@ -16,6 +16,9 @@
 		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
 		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */; };
+		2DC7B1C01BB3A78300830327 /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7B1BF1BB3A78300830327 /* Desert.png */; };
+		2DC7B1C31BB3AA0C00830327 /* PauseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7B1C11BB3AA0C00830327 /* PauseState.cpp */; };
+		2DC7B1C51BB3AEDE00830327 /* cloudyg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7B1C41BB3AEDE00830327 /* cloudyg.png */; };
 		2DC9080C1BA4C75A0045C5A5 /* DataTables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9080B1BA4C75A0045C5A5 /* DataTables.cpp */; };
 		2DD109D11BB3413600006529 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD109D01BB3413600006529 /* GameState.cpp */; };
 		2DD109D31BB3436600006529 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD109D21BB3436600006529 /* World.cpp */; };
@@ -61,6 +64,10 @@
 		2D612C761B9CE59000F1BCC1 /* Foreach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpriteNode.hpp; sourceTree = "<group>"; };
+		2DC7B1BF1BB3A78300830327 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
+		2DC7B1C11BB3AA0C00830327 /* PauseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseState.cpp; sourceTree = "<group>"; };
+		2DC7B1C21BB3AA0C00830327 /* PauseState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PauseState.hpp; sourceTree = "<group>"; };
+		2DC7B1C41BB3AEDE00830327 /* cloudyg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudyg.png; sourceTree = "<group>"; };
 		2DC9080A1BA4C6960045C5A5 /* DataTables.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DataTables.hpp; sourceTree = "<group>"; };
 		2DC9080B1BA4C75A0045C5A5 /* DataTables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataTables.cpp; sourceTree = "<group>"; };
 		2DD109CF1BB340DD00006529 /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
@@ -128,6 +135,8 @@
 				2DD109CF1BB340DD00006529 /* GameState.hpp */,
 				2D51D7281BAD321900D38EC8 /* BattleState.cpp */,
 				2D51D7291BAD321900D38EC8 /* BattleState.hpp */,
+				2DC7B1C11BB3AA0C00830327 /* PauseState.cpp */,
+				2DC7B1C21BB3AA0C00830327 /* PauseState.hpp */,
 			);
 			name = "States, Stack, IDs";
 			sourceTree = "<group>";
@@ -206,6 +215,8 @@
 		D24800411B98549E00E0D5CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2DC7B1BF1BB3A78300830327 /* Desert.png */,
+				2DC7B1C41BB3AEDE00830327 /* cloudyg.png */,
 				D23481801BA2230A00893517 /* BlueDragon.png */,
 				D23481841BA2233D00893517 /* Link.png */,
 				2DFFB9461BA125DA00D5A9AD /* TitleScreen.png */,
@@ -295,8 +306,10 @@
 				2DFFB9431BA11CF800D5A9AD /* Buttons.png in Resources */,
 				2D2AAE9F1B9E8A42006A474B /* Utility.inl in Resources */,
 				D23481821BA2230A00893517 /* BlueDragon.png in Resources */,
+				2DC7B1C01BB3A78300830327 /* Desert.png in Resources */,
 				D24800721B98553700E0D5CC /* Sansation.ttf in Resources */,
 				D248006E1B98553700E0D5CC /* Mountain.png in Resources */,
+				2DC7B1C51BB3AEDE00830327 /* cloudyg.png in Resources */,
 				D248006F1B98553700E0D5CC /* turnbased-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +342,7 @@
 				2D2AAEA11B9E8A51006A474B /* Utility.cpp in Sources */,
 				2D51D72A1BAD321900D38EC8 /* BattleState.cpp in Sources */,
 				2DD109D31BB3436600006529 /* World.cpp in Sources */,
+				2DC7B1C31BB3AA0C00830327 /* PauseState.cpp in Sources */,
 				2DC9080C1BA4C75A0045C5A5 /* DataTables.cpp in Sources */,
 				2DFFB9411BA11BDE00D5A9AD /* Button.cpp in Sources */,
 				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,

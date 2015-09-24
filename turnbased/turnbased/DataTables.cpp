@@ -14,10 +14,10 @@ std::vector<HeroData> initializeHeroData()  // Can create basic AI
 {
     std::vector<HeroData> data(Hero::ActorCount);
     
-    data[Hero::Link].hitpoints = 100;
-    data[Hero::Link].agility = 20;
-    data[Hero::Link].attack = 20;
-    data[Hero::Link].texture = Textures::Link;
+    data[Hero::Cloud].speed = 200.f;
+    data[Hero::Cloud].texture = Textures::Cloud;
+    data[Hero::Cloud].textureRect = sf::IntRect(0, 0, 64, 64);
+    data[Hero::Cloud].hasMoveAnimation = true;
     
     return data;
 }

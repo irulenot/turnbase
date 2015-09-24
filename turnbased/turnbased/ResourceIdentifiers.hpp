@@ -20,11 +20,13 @@ namespace Textures
     enum ID
     {
         Mountain,
+        Desert,
         TitleScreen,
         
         Buttons,
         
         Link,
+        Cloud,
         BlueDragon,
     };
 }
