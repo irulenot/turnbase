@@ -93,6 +93,7 @@ void World::buildScene()
     mPlayerHero = cloud.get();
     mPlayerHero->setPosition(mSpawnPosition);
     mSceneLayers[Walkway]->attachChild(std::move(cloud));
+    
 }
 
 void World::adaptPlayerPosition()

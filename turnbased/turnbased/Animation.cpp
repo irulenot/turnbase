@@ -8,7 +8,8 @@
 
 #include "Animation.hpp"
 
-Animation::Animation() : m_texture(NULL)
+Animation::Animation()
+: mTexture()
 {
     
 }
@@ -18,14 +19,14 @@ void Animation::addFrame(sf::IntRect rect)
     m_frames.push_back(rect);
 }
 
-void Animation::setSpriteSheet(const sf::Texture& texture)
+void Animation::setSpriteSheet(const TextureHolder& texture)
 {
-    m_texture = &texture;
+    mTexture = texture;
 }
 
-const sf::Texture* Animation::getSpriteSheet() const
+const TextureHolder Animation::getSpriteSheet() const
 {
-    return m_texture;
+    return mTexture;
 }
 
 std::size_t Animation::getSize() const

@@ -131,8 +131,8 @@ void centerOrigin(sf::Text& text)
 	text.setOrigin(std::floor(bounds.left + bounds.width / 2.f), std::floor(bounds.top + bounds.height / 2.f));
 }
 
-void centerOrigin(Animation& animation)
+void centerOrigin(AnimatedSprite& AnimatedSprite)
 {
-    sf::FloatRect bounds = animation.getLocalBounds();
-    animation.setOrigin(std::floor(bounds.left + bounds.width / 2.f), std::floor(bounds.top + bounds.height / 2.f));
+    sf::FloatRect bounds = AnimatedSprite.getLocalBounds();
+    AnimatedSprite.setOrigin(std::floor(bounds.left + bounds.width / 2.f), std::floor(bounds.top + bounds.height / 2.f));
 }

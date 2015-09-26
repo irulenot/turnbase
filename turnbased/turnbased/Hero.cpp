@@ -43,11 +43,38 @@ Hero::Hero(Actor actor, const TextureHolder& textures)
 {
     centerOrigin(mSprite);
     
-    mMovement.setFrameSize(sf::Vector2i(256, 256));
-    mMovement.setNumFrames(16);
-    mMovement.setDuration(sf::seconds(1));
+    Animation walkAnimationDown;
+    walkAnimationDown.setSpriteSheet(textures);
+    walkAnimationDown.addFrame(sf::IntRect(0, 0, 64, 64));
+    walkAnimationDown.addFrame(sf::IntRect(64, 0, 64, 64));
+    walkAnimationDown.addFrame(sf::IntRect(128, 0, 64, 64));
+    walkAnimationDown.addFrame(sf::IntRect(192, 0, 64, 64));
     
-    centerOrigin(mMovement);
+    Animation walkAnimationLeft;
+    walkAnimationLeft.setSpriteSheet(textures);
+    walkAnimationLeft.addFrame(sf::IntRect(0, 64, 64, 64));
+    walkAnimationLeft.addFrame(sf::IntRect(64, 64, 64, 64));
+    walkAnimationLeft.addFrame(sf::IntRect(128, 64, 64, 64));
+    walkAnimationLeft.addFrame(sf::IntRect(192, 64, 64, 64));
+
+    Animation walkAnimationRight;
+    walkAnimationRight.setSpriteSheet(textures);
+    walkAnimationRight.addFrame(sf::IntRect(0, 128, 64, 64));
+    walkAnimationRight.addFrame(sf::IntRect(64, 128, 64, 64));
+    walkAnimationRight.addFrame(sf::IntRect(128, 128, 64, 64));
+    walkAnimationRight.addFrame(sf::IntRect(192, 128, 64, 64));
+    
+    Animation walkAnimationUp;
+    walkAnimationUp.setSpriteSheet(textures);
+    walkAnimationUp.addFrame(sf::IntRect(0, 192, 64, 64));
+    walkAnimationUp.addFrame(sf::IntRect(64, 192, 64, 64));
+    walkAnimationUp.addFrame(sf::IntRect(128, 192, 64, 64));
+    walkAnimationUp.addFrame(sf::IntRect(192, 192, 64, 64));
+
+    Animation* currentAnimation = &walkAnimationDown;
+    
+    AnimatedSprite animatedSprite;
+    centerOrigin(animatedSprite);
 }
 
 
@@ -64,29 +91,18 @@ void Hero::updateCurrent(sf::Time dt, CommandQueue& commands)
 }
 
 
-/*UNDER CONSTRUCTION*/
 void Hero::updateMoveAnimation()
 {
-    sf::Clock clock;
-    sf::Time animationTimer = sf::Time::Zero;
-    int animItr = 0;
+    float speed = 80.f;
+    bool noKeyWasPressed = true;
     
-    if (Table[mActor].hasMoveAnimation)
-    {
-        sf::IntRect textureRect = Table[mActor].textureRect;
-        
-        // Moving Down: 1st row of texture rect
-        while (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-        {
-            textureRect.left += textureRect.width;
-            if (textureRect.left == 256)
-            {
-                textureRect.left = 0;
-            }
-        }
+    sf::Vector2f movement(0.f, 0.f);
 
-        
-        mSprite.setTextureRect(textureRect);
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+    {
+        currentAnimation = &walkAnimationUp;
+        movement.y -= speed;
+        noKeyWasPressed = false;
     }
 }
 

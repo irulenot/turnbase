@@ -14,9 +14,9 @@
 #include "ResourceIdentifiers.hpp"
 #include "CommandQueue.hpp"
 #include "AnimatedSprite.hpp"
+#include "Animation.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
-
 
 class Hero : public Entity
 {
@@ -39,7 +39,6 @@ class Hero : public Entity
     private:
         Actor					mActor;
         sf::Sprite				mSprite;
-        AnimatedSprite			mMovement;
 
     
     

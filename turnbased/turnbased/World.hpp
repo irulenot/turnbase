@@ -16,6 +16,8 @@
 #include "Hero.hpp"
 #include "CommandQueue.hpp"
 #include "Command.hpp"
+#include "Animation.hpp"
+#include "AnimatedSprite.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>

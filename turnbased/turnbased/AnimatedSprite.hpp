@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 WandA. All rights reserved.
 //
 
-#ifndef __turnbased__Animation__
-#define __turnbased__Animation__
+#ifndef __turnbased__AnimatedSprite__
+#define __turnbased__AnimatedSprite__
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/System/Time.hpp>
@@ -69,4 +69,4 @@ private:
     bool                    mIsPaused;
     
 };
-#endif /* defined(__turnbased__Animation__) */
+#endif
