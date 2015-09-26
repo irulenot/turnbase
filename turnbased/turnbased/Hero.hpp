@@ -13,6 +13,7 @@
 #include "ResourceHolder.hpp"
 #include "ResourceIdentifiers.hpp"
 #include "CommandQueue.hpp"
+#include "AnimatedSprite.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -33,10 +34,14 @@ class Hero : public Entity
         virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
         void					updateMoveAnimation();
         virtual void 			updateCurrent(sf::Time dt, CommandQueue& commands);
+        void                    setTextureRect(int left, int top, int width, int height);
     
     private:
         Actor					mActor;
         sf::Sprite				mSprite;
+        AnimatedSprite			mMovement;
+
+    
     
    
     

@@ -11,7 +11,6 @@
 #include "Utility.hpp"
 #include "DataTables.hpp"
 
-
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/System/Time.hpp>
@@ -43,6 +42,12 @@ Hero::Hero(Actor actor, const TextureHolder& textures)
 , mSprite(textures.get(Table[actor].texture), Table[actor].textureRect)
 {
     centerOrigin(mSprite);
+    
+    mMovement.setFrameSize(sf::Vector2i(256, 256));
+    mMovement.setNumFrames(16);
+    mMovement.setDuration(sf::seconds(1));
+    
+    centerOrigin(mMovement);
 }
 
 
@@ -53,8 +58,9 @@ void Hero::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Hero::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
-    // Update texts and roll animation
+    // Update texts and move animation
     updateMoveAnimation();
+    
 }
 
 
@@ -63,6 +69,7 @@ void Hero::updateMoveAnimation()
 {
     sf::Clock clock;
     sf::Time animationTimer = sf::Time::Zero;
+    int animItr = 0;
     
     if (Table[mActor].hasMoveAnimation)
     {
@@ -71,10 +78,8 @@ void Hero::updateMoveAnimation()
         // Moving Down: 1st row of texture rect
         while (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
         {
-            sf::Time dt = clock.restart();
-            animationTimer += dt;
             textureRect.left += textureRect.width;
-            if (animationTimer.asSeconds() >= 1.f)
+            if (textureRect.left == 256)
             {
                 textureRect.left = 0;
             }
@@ -84,3 +89,6 @@ void Hero::updateMoveAnimation()
         mSprite.setTextureRect(textureRect);
     }
 }
+
+
+

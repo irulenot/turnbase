@@ -45,7 +45,7 @@ void World::update(sf::Time dt)
     adaptPlayerVelocity();
     
     // Regular update step, adapt position (correct if outside view)
-    mSceneGraph.update(dt);
+    mSceneGraph.update(dt, mCommandQueue);
     adaptPlayerPosition();
 }
 

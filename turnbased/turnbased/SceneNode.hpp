@@ -10,6 +10,7 @@
 #define __turnbased__SceneNode__
 
 #include "Category.hpp"
+#include "CommandQueue.hpp"
 
 #include <SFML/System/Noncopyable.hpp>
 #include <SFML/System/Time.hpp>
@@ -32,7 +33,7 @@ public:
     void                    attachChild(Ptr child);
     Ptr                     detachChild(const SceneNode& node);
     
-    void                    update(sf::Time dt);
+    void                    update(sf::Time dt, CommandQueue& commands);
     
     sf::Vector2f			getWorldPosition() const;       //returns ABSOLUTE position
     sf::Transform			getWorldTransform() const;      // accounts for all parent transforms
@@ -41,8 +42,8 @@ public:
     virtual unsigned int	getCategory() const;
     
 private:
-    virtual void			updateCurrent(sf::Time dt);
-    void					updateChildren(sf::Time dt);
+    virtual void			updateCurrent(sf::Time dt, CommandQueue& commands);
+    void					updateChildren(sf::Time dt, CommandQueue& commands);
     
     virtual void			draw(sf::RenderTarget& target, sf::RenderStates states) const;
     virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;

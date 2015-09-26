@@ -10,6 +10,7 @@
 #define __turnbased__Entity__
 
 #include "SceneNode.hpp"
+#include "CommandQueue.hpp"
 
 class Entity : public SceneNode
 {
@@ -22,7 +23,7 @@ public:
     
     
 private:
-    virtual void		updateCurrent(sf::Time dt);
+    virtual void		updateCurrent(sf::Time dt, CommandQueue&);
     
     
 private:

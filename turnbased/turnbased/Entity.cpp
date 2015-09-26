@@ -7,6 +7,7 @@
 //
 
 #include "Entity.hpp"
+#include <iostream>
 
 void Entity::setVelocity(sf::Vector2f velocity)
 {
@@ -35,7 +36,7 @@ void Entity::accelerate(float vx, float vy)
     mVelocity.y += vy;
 }
 
-void Entity::updateCurrent(sf::Time dt)
+void Entity::updateCurrent(sf::Time dt, CommandQueue&)
 {
     move(mVelocity * dt.asSeconds());
 }
