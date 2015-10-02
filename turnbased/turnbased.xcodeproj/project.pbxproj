@@ -16,6 +16,7 @@
 		2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C701B9CD7F000F1BCC1 /* SceneNode.cpp */; };
 		2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C731B9CD80500F1BCC1 /* Entity.cpp */; };
 		2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */; };
+		2D9B89261BBE2ECF0034A5F8 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B89241BBE2ECF0034A5F8 /* Animation.cpp */; };
 		2DC7B1C01BB3A78300830327 /* Desert.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7B1BF1BB3A78300830327 /* Desert.png */; };
 		2DC7B1C31BB3AA0C00830327 /* PauseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7B1C11BB3AA0C00830327 /* PauseState.cpp */; };
 		2DC7B1C51BB3AEDE00830327 /* cloudyg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7B1C41BB3AEDE00830327 /* cloudyg.png */; };
@@ -25,8 +26,6 @@
 		2DD109D61BB344E300006529 /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD109D51BB344E300006529 /* Command.cpp */; };
 		2DD109DA1BB345DB00006529 /* CommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD109D91BB345DB00006529 /* CommandQueue.cpp */; };
 		2DD109DD1BB346AD00006529 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD109DB1BB346AD00006529 /* Player.cpp */; };
-		2DD650371BB67B6600314FC1 /* AnimatedSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD650351BB67B6600314FC1 /* AnimatedSprite.cpp */; };
-		2DD6503A1BB687E900314FC1 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DD650381BB687E900314FC1 /* Animation.cpp */; };
 		2DFFB9371BA1186B00D5A9AD /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */; };
 		2DFFB93A1BA11A0A00D5A9AD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB9391BA11A0A00D5A9AD /* Component.cpp */; };
 		2DFFB93D1BA11AB200D5A9AD /* Container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFFB93C1BA11AB200D5A9AD /* Container.cpp */; };
@@ -66,6 +65,8 @@
 		2D612C761B9CE59000F1BCC1 /* Foreach.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foreach.hpp; sourceTree = "<group>"; };
 		2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpriteNode.hpp; sourceTree = "<group>"; };
+		2D9B89241BBE2ECF0034A5F8 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		2D9B89251BBE2ECF0034A5F8 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 		2DC7B1BF1BB3A78300830327 /* Desert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desert.png; sourceTree = "<group>"; };
 		2DC7B1C11BB3AA0C00830327 /* PauseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseState.cpp; sourceTree = "<group>"; };
 		2DC7B1C21BB3AA0C00830327 /* PauseState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PauseState.hpp; sourceTree = "<group>"; };
@@ -82,10 +83,6 @@
 		2DD109D91BB345DB00006529 /* CommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandQueue.cpp; sourceTree = "<group>"; };
 		2DD109DB1BB346AD00006529 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		2DD109DC1BB346AD00006529 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
-		2DD650351BB67B6600314FC1 /* AnimatedSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimatedSprite.cpp; sourceTree = "<group>"; };
-		2DD650361BB67B6600314FC1 /* AnimatedSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimatedSprite.hpp; sourceTree = "<group>"; };
-		2DD650381BB687E900314FC1 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
-		2DD650391BB687E900314FC1 /* Animation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
 		2DFFB9351BA1185E00D5A9AD /* MenuState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenuState.hpp; sourceTree = "<group>"; };
 		2DFFB9361BA1186B00D5A9AD /* MenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuState.cpp; sourceTree = "<group>"; };
 		2DFFB9381BA119F600D5A9AD /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
@@ -198,10 +195,8 @@
 				2D612C711B9CD7F000F1BCC1 /* SceneNode.hpp */,
 				2D612C771B9D441E00F1BCC1 /* SpriteNode.cpp */,
 				2D612C781B9D441E00F1BCC1 /* SpriteNode.hpp */,
-				2DD650381BB687E900314FC1 /* Animation.cpp */,
-				2DD650391BB687E900314FC1 /* Animation.hpp */,
-				2DD650351BB67B6600314FC1 /* AnimatedSprite.cpp */,
-				2DD650361BB67B6600314FC1 /* AnimatedSprite.hpp */,
+				2D9B89241BBE2ECF0034A5F8 /* Animation.cpp */,
+				2D9B89251BBE2ECF0034A5F8 /* Animation.hpp */,
 				2DD109DB1BB346AD00006529 /* Player.cpp */,
 				2DD109DC1BB346AD00006529 /* Player.hpp */,
 				2DD109D21BB3436600006529 /* World.cpp */,
@@ -356,13 +351,12 @@
 				2DC9080C1BA4C75A0045C5A5 /* DataTables.cpp in Sources */,
 				2DFFB9411BA11BDE00D5A9AD /* Button.cpp in Sources */,
 				2D612C721B9CD7F000F1BCC1 /* SceneNode.cpp in Sources */,
-				2DD6503A1BB687E900314FC1 /* Animation.cpp in Sources */,
 				2DD109D11BB3413600006529 /* GameState.cpp in Sources */,
 				2D612C751B9CD80500F1BCC1 /* Entity.cpp in Sources */,
 				2D2AAE911B9E6D34006A474B /* State.cpp in Sources */,
 				2D612C791B9D441E00F1BCC1 /* SpriteNode.cpp in Sources */,
 				2DFFB9371BA1186B00D5A9AD /* MenuState.cpp in Sources */,
-				2DD650371BB67B6600314FC1 /* AnimatedSprite.cpp in Sources */,
+				2D9B89261BBE2ECF0034A5F8 /* Animation.cpp in Sources */,
 				D234817E1BA21F4D00893517 /* Hero.cpp in Sources */,
 				2D2AAE9B1B9E8993006A474B /* TitleState.cpp in Sources */,
 				2DFFB93D1BA11AB200D5A9AD /* Container.cpp in Sources */,

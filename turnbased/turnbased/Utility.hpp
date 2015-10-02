@@ -2,9 +2,9 @@
 #define BOOK_UTILITY_HPP
 
 #include <SFML/Window/Keyboard.hpp>
+#include "Animation.hpp"
 
 #include <sstream>
-#include "AnimatedSprite.hpp"
 
 namespace sf
 {
@@ -23,7 +23,7 @@ std::string toString(sf::Keyboard::Key key);
 // Call setOrigin() with the center of the object
 void centerOrigin(sf::Sprite& sprite);
 void centerOrigin(sf::Text& text);
-void centerOrigin(AnimatedSprite& AnimatedSprite);
+void centerOrigin(Animation& Animation);
 
 #include "Utility.inl"
 #endif // BOOK_UTILITY_HPP

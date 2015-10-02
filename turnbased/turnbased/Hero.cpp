@@ -10,15 +10,19 @@
 #include "ResourceHolder.hpp"
 #include "Utility.hpp"
 #include "DataTables.hpp"
+#include "Animation.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/System/Clock.hpp>
+#include <SFML/Window/Event.hpp>
 
+#include <iostream>
 #include <cmath>
 
 namespace
+
 {
     const std::vector<HeroData> Table = initializeHeroData();
 }
@@ -37,44 +41,33 @@ Textures::ID toTextureID(Hero::Actor actor)
 }
 
 Hero::Hero(Actor actor, const TextureHolder& textures)
-: 
-  mActor(actor)
+: mActor(actor)
 , mSprite(textures.get(Table[actor].texture), Table[actor].textureRect)
+, mMoveDown(textures.get(Textures::Cloud))
+, mMoveUp(textures.get(Textures::Cloud))
+, mMoveLeft(textures.get(Textures::Cloud))
+, mMoveRight(textures.get(Textures::Cloud))
+
+, mHasMoveAnimation(true)
 {
+    mMoveDown.setFrameSize(sf::Vector2i (64, 64));
+    mMoveDown.setNumFrames(4);
+    mMoveDown.setDuration(sf::seconds(0.25));
+    
+    mMoveUp.setFrameSize(sf::Vector2i (64, 64));
+    mMoveUp.setNumFrames(4);
+    mMoveUp.setDuration(sf::seconds(0.25));
+    
+    mMoveLeft.setFrameSize(sf::Vector2i (64, 64));
+    mMoveLeft.setNumFrames(4);
+    mMoveLeft.setDuration(sf::seconds(0.25));
+    
+    mMoveRight.setFrameSize(sf::Vector2i (64, 64));
+    mMoveRight.setNumFrames(4);
+    mMoveRight.setDuration(sf::seconds(0.25));
+    
     centerOrigin(mSprite);
     
-    Animation walkAnimationDown;
-    walkAnimationDown.setSpriteSheet(textures);
-    walkAnimationDown.addFrame(sf::IntRect(0, 0, 64, 64));
-    walkAnimationDown.addFrame(sf::IntRect(64, 0, 64, 64));
-    walkAnimationDown.addFrame(sf::IntRect(128, 0, 64, 64));
-    walkAnimationDown.addFrame(sf::IntRect(192, 0, 64, 64));
-    
-    Animation walkAnimationLeft;
-    walkAnimationLeft.setSpriteSheet(textures);
-    walkAnimationLeft.addFrame(sf::IntRect(0, 64, 64, 64));
-    walkAnimationLeft.addFrame(sf::IntRect(64, 64, 64, 64));
-    walkAnimationLeft.addFrame(sf::IntRect(128, 64, 64, 64));
-    walkAnimationLeft.addFrame(sf::IntRect(192, 64, 64, 64));
-
-    Animation walkAnimationRight;
-    walkAnimationRight.setSpriteSheet(textures);
-    walkAnimationRight.addFrame(sf::IntRect(0, 128, 64, 64));
-    walkAnimationRight.addFrame(sf::IntRect(64, 128, 64, 64));
-    walkAnimationRight.addFrame(sf::IntRect(128, 128, 64, 64));
-    walkAnimationRight.addFrame(sf::IntRect(192, 128, 64, 64));
-    
-    Animation walkAnimationUp;
-    walkAnimationUp.setSpriteSheet(textures);
-    walkAnimationUp.addFrame(sf::IntRect(0, 192, 64, 64));
-    walkAnimationUp.addFrame(sf::IntRect(64, 192, 64, 64));
-    walkAnimationUp.addFrame(sf::IntRect(128, 192, 64, 64));
-    walkAnimationUp.addFrame(sf::IntRect(192, 192, 64, 64));
-
-    Animation* currentAnimation = &walkAnimationDown;
-    
-    AnimatedSprite animatedSprite;
-    centerOrigin(animatedSprite);
 }
 
 
@@ -86,24 +79,17 @@ void Hero::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 void Hero::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
     // Update texts and move animation
-    updateMoveAnimation();
+    updateMoveAnimation(dt, commands);
     
 }
 
 
-void Hero::updateMoveAnimation()
+void Hero::updateMoveAnimation(sf::Time dt, CommandQueue& commands)
 {
-    float speed = 80.f;
-    bool noKeyWasPressed = true;
-    
-    sf::Vector2f movement(0.f, 0.f);
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-    {
-        currentAnimation = &walkAnimationUp;
-        movement.y -= speed;
-        noKeyWasPressed = false;
-    }
+    mMoveDown.update(dt);
+    mMoveLeft.update(dt);
+    mMoveRight.update(dt);
+    mMoveUp.update(dt);
 }
 
 
